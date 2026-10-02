@@ -8,6 +8,10 @@ The client's own look, carried over from the old WordPress site: white backgroun
 Icons are the client's: `public/icons/*.png` built by `scripts/icons.mjs` from source-media (striper, sealing, coating, repair = the 4-icon composite; lot, fire-lane, ada, crack, striper-solid, shovel-solid = the yellow silhouettes). Each service has an `icon` field in services.ts. Do not swap in generic icon fonts.
 Rejected on 2026-10-02: a dark "asphalt" theme with Big Shoulders stencil type. User said it was too dark and cramped.
 
+## Projects (case studies)
+
+`src/content/projects/*.md`, rendered by `components/ProjectPage.tsx`. Facts only from the photos and from photo EXIF/GPS (`exif-reader` dev dep; see the reverse-geocode one-liner in git history of 2026-10-02). Known: Chambersburg floor Jan 31 2025, Burnham plaza Jul 14 + Aug 3 2024, Strasburg driveway Sep 13 2024. Unknown date/town (WordPress stripped EXIF): overnight shopping center striping, commercial lot crack sealing. Other dated jobs available for future write-ups: Ephrata Twp driveway Sep 5 2024 (IMG_1894/1895), Leaman Place driveway Sep 12 2024 (1964/1965), Lampeter driveway Oct 5 2024 (2132/2134), East Drumore driveway Oct 9 2024 (2158/2159), Lower Windsor Twp (York Co) driveway Oct 19 2024 (2205/2211), Gap fresh asphalt lane Sep 19 2024 (3664 to 3673, unclear if paving or sealing), Talmage arrows Aug 15 2024 (1820), Ontelaunee (Berks) NO PARKING stencil Oct 3 2024 (2123).
+
 ## Facts that need the client
 
 - Google Business Profile (checked 2026-10-02 via maps cid 10068187502945296993): name "Lancaster Lines & Asphalt", category Asphalt contractor, 5.0 rating, address 150 E Main St, Strasburg, PA 17579, phone (717) 808-1600, website linesasphalt.com. Site NAP now matches it: address shown in footer, contact and schema. `site.gbp.url` links to the listing, `site.gbp.reviewUrl` opens the review dialog (ludocid/lrd link, no Place ID available).
