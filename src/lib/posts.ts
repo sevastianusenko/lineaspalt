@@ -50,7 +50,7 @@ const hero: Record<string, string> = {
 };
 
 function parse(file: string): Post {
-  const raw = fs.readFileSync(path.join(dir, file), "utf8");
+  const raw = fs.readFileSync(path.join(dir, file), "utf8").replace(/\r\n/g, "\n");
   const m = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
   if (!m) throw new Error(`Bad frontmatter: ${file}`);
   const fm: Record<string, unknown> = {};
