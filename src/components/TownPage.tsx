@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Breadcrumbs, FaqList, Icon, LeadSection, PageHero, Photo, ReviewCard, SectionHead, Stars, TownChips } from "./ui";
+import { Breadcrumbs, FaqList, Icon, LeadSection, PageHero, Photo, ProjectCard, ReviewCard, SectionHead, Stars, TownChips } from "./ui";
 import JsonLd from "./JsonLd";
 import { towns, townFaqs, type Town } from "@/content/towns";
 import { featured } from "@/content/reviews";
+import { projectsForTown } from "@/lib/projects";
 import { abs, site } from "@/lib/site";
 import { businessId } from "@/lib/schema";
 
@@ -15,6 +16,7 @@ const seasons = [
 
 export default function TownPage({ t }: { t: Town }) {
   const faqs = townFaqs(t);
+  const projects = projectsForTown(t.slug);
   const url = abs(t.path);
   const nearby = t.nearby.map((n) => {
     const m = towns.find((x) => x.name.toLowerCase() === n.toLowerCase());
@@ -130,6 +132,19 @@ export default function TownPage({ t }: { t: Town }) {
           </div>
         </div>
       </section>
+
+      {projects.length > 0 && (
+        <section className="sec-grey py-20 lg:py-28">
+          <div className="wrap">
+            <SectionHead eyebrow="Our work here" title={<>{site.short} projects in {t.name}</>} />
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              {projects.slice(0, 3).map((p) => (
+                <div key={p.slug} className="reveal"><ProjectCard p={p} /></div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">

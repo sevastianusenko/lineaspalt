@@ -64,7 +64,8 @@ export default function Footer() {
           <h3 className="mb-5 text-[17px]">Company</h3>
           <ul className="grid gap-2.5 text-[16px] text-[#333]">
             <li><Link href="/about/" className="hover:text-black hover:underline">About {site.name}</Link></li>
-            <li><Link href="/gallery/" className="hover:text-black hover:underline">Our work</Link></li>
+            <li><Link href="/projects/" className="hover:text-black hover:underline">Projects</Link></li>
+            <li><Link href="/gallery/" className="hover:text-black hover:underline">Photo gallery</Link></li>
             <li><Link href="/blog/" className="hover:text-black hover:underline">Blog</Link></li>
             <li><Link href="/contact/" className="hover:text-black hover:underline">Contact</Link></li>
             <li><a href={site.gbp.reviewUrl} target="_blank" rel="noopener noreferrer" className="hover:text-black hover:underline">Leave a Google review</a></li>

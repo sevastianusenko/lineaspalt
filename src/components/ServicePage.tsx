@@ -1,15 +1,17 @@
 import Link from "next/link";
-import { Breadcrumbs, FaqList, Icon, LeadSection, PageHero, Photo, PostCard, SectionHead, Stars, TownChips } from "./ui";
+import { Breadcrumbs, FaqList, Icon, LeadSection, PageHero, Photo, PostCard, ProjectCard, SectionHead, Stars, TownChips } from "./ui";
 import JsonLd from "./JsonLd";
 import { bySlug, type Service } from "@/content/services";
 import { towns } from "@/content/towns";
 import { getPost } from "@/lib/posts";
+import { projectsForService } from "@/lib/projects";
 import { abs, site } from "@/lib/site";
 import { businessId } from "@/lib/schema";
 
 export default function ServicePage({ s }: { s: Service }) {
   const related = s.related.map(bySlug).filter(Boolean) as Service[];
   const posts = s.posts.map(getPost).filter(Boolean) as NonNullable<ReturnType<typeof getPost>>[];
+  const projects = projectsForService(s.slug);
   const core = towns.filter((t) => t.tier === "core").slice(0, 14);
   const url = abs(`/${s.slug}/`);
 
@@ -168,6 +170,17 @@ export default function ServicePage({ s }: { s: Service }) {
               </Link>
             ))}
           </div>
+
+          {projects.length > 0 && (
+            <>
+              <h3 className="reveal mt-16 text-[28px]">{s.name} projects we have written up</h3>
+              <div className="mt-6 grid gap-6 md:grid-cols-3">
+                {projects.slice(0, 3).map((p) => (
+                  <div key={p.slug} className="reveal"><ProjectCard p={p} /></div>
+                ))}
+              </div>
+            </>
+          )}
 
           {posts.length > 0 && (
             <>

@@ -208,6 +208,27 @@ export function ReviewCard({ r }: { r: Review }) {
   );
 }
 
+/* ---------- Project card ---------- */
+export function ProjectCard({ p }: { p: { slug: string; title: string; summary: string; hero: string; town: string; completed: string } }) {
+  const meta = [p.town, p.completed].filter(Boolean).join(" · ");
+  return (
+    <Link href={`/projects/${p.slug}/`} className="card flex h-full flex-col overflow-hidden">
+      <span className="block aspect-[4/3] overflow-hidden bg-grey-2">
+        <Photo slug={p.hero} small className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
+      </span>
+      <span className="flex flex-1 flex-col p-6">
+        {meta && <span className="eyebrow !text-[13px]">{meta}</span>}
+        <span className="mt-3 block font-display text-[20px] font-bold leading-[1.2] text-black">{p.title}</span>
+        <span className="mt-3 line-clamp-3 block text-[15px] text-muted">{p.summary}</span>
+        <span className="more mt-auto pt-5 !text-[15px]">
+          View project
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </span>
+      </span>
+    </Link>
+  );
+}
+
 /* ---------- Post card: title over the photo, like the old blog grid ---------- */
 export function PostCard({ p }: { p: Post }) {
   return (

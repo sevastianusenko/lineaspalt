@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Photo, SectionHead, ReviewCard, Stars, PostCard, LeadSection, TownChips, FaqList, Icon, GoogleBadge } from "@/components/ui";
+import { Photo, SectionHead, ReviewCard, Stars, PostCard, LeadSection, TownChips, FaqList, Icon, GoogleBadge, ProjectCard } from "@/components/ui";
 import PriceCalc from "@/components/PriceCalc";
 import { services } from "@/content/services";
 import { towns } from "@/content/towns";
 import { featured } from "@/content/reviews";
 import { getPosts } from "@/lib/posts";
+import { getProjects } from "@/lib/projects";
 import { site } from "@/lib/site";
 import { allImages } from "@/lib/images";
 
@@ -20,17 +21,6 @@ const core3 = [
   { icon: "striper", name: "Striping", copy: "Clean, accurate lines for parking lots, roads, fire lanes, ADA compliance and more.", href: "/line-striping-service-lancaster-pa/" },
   { icon: "coating", name: "Protection", copy: "Sealcoating, crack filling and surface coating to protect and extend pavement life.", href: "/sealcoating-lancaster-pa/" },
   { icon: "repair", name: "Repair", copy: "Pothole patching and surface restoration for damaged asphalt.", href: "/pothole-repair-lancaster-pa/" },
-];
-
-const work = [
-  "warehouse-floor-line-marking-yellow-red",
-  "driveway-sealcoat-fall-tree",
-  "ada-blue-symbol-night-striping",
-  "retail-lot-yellow-stalls-ada-curb",
-  "hot-pour-crack-sealing-crew",
-  "driveway-sealcoat-glossy-wet",
-  "reserved-stencil-night",
-  "church-lot-ada-hatched-stalls",
 ];
 
 const homeFaqs = [
@@ -48,6 +38,7 @@ const Arrow = () => (
 
 export default function Home() {
   const posts = getPosts().slice(0, 6);
+  const projects = getProjects().slice(0, 4);
   const core = towns.filter((t) => t.tier === "core");
   return (
     <>
@@ -238,14 +229,15 @@ export default function Home() {
       <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHead eyebrow={`${site.name} photo gallery`} title="Our latest projects" />
-            <Link href="/gallery/" className="btn btn-outline reveal">See all {allImages().length} photos</Link>
+            <SectionHead eyebrow={`${site.name} projects`} title="Our latest projects" lead="Real jobs with photos: what the property needed, how we did it and what the owner should expect afterward." />
+            <div className="reveal flex flex-wrap gap-3">
+              <Link href="/projects/" className="btn btn-outline">All projects</Link>
+              <Link href="/gallery/" className="btn btn-outline">{allImages().length} photos</Link>
+            </div>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
-            {work.map((w, i) => (
-              <Link key={w} href="/gallery/" className="reveal photo aspect-[4/3] block" style={{ transitionDelay: `${(i % 4) * 60}ms` }}>
-                <Photo slug={w} small className="transition-transform duration-500 hover:scale-105" />
-              </Link>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {projects.map((p, i) => (
+              <div key={p.slug} className="reveal" style={{ transitionDelay: `${(i % 4) * 60}ms` }}><ProjectCard p={p} /></div>
             ))}
           </div>
         </div>
