@@ -32,8 +32,8 @@ export default function ServicePage({ s }: { s: Service }) {
       <section className="sec-grey py-20 lg:py-28">
         <div className="wrap grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
-            <p className="eyebrow reveal">The short version</p>
-            <h2 className="reveal mt-4 text-[clamp(28px,3.4vw,40px)]">What it is, and when it matters</h2>
+            <p className="eyebrow reveal">{site.name}</p>
+            <h2 className="reveal mt-4 text-[clamp(28px,3.4vw,40px)]">{s.name}: what it is, and when it matters</h2>
           </div>
           <div className="space-y-6 text-[18px] leading-[1.8] text-[#333]">
             {s.intro.map((p, i) => (
@@ -46,7 +46,7 @@ export default function ServicePage({ s }: { s: Service }) {
       {/* Included */}
       <section className="sec py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead eyebrow="What is included" title={<>Every {s.name.toLowerCase()} job <mark className="hl">covers this</mark></>} />
+          <SectionHead eyebrow="What is included" title={<>Every {s.name.toLowerCase()} job from {site.name} <mark className="hl">covers this</mark></>} />
           <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {s.includes.map((it, i) => (
               <li key={it.t} className="card card-flat reveal p-7" style={{ transitionDelay: `${(i % 3) * 60}ms` }}>
@@ -90,7 +90,7 @@ export default function ServicePage({ s }: { s: Service }) {
       <section className="sec-black py-20 lg:py-28">
         <div className="wrap">
           <p className="eyebrow reveal">How it goes</p>
-          <h2 className="reveal mt-4 max-w-3xl text-[clamp(30px,3.6vw,44px)]">Our process, start to finish</h2>
+          <h2 className="reveal mt-4 max-w-3xl text-[clamp(30px,3.6vw,44px)]">How {site.name} does it, start to finish</h2>
           <ol className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {s.process.map((p, i) => (
               <li key={p.t} className="reveal border-t-4 border-yellow pt-5" style={{ transitionDelay: `${i * 80}ms` }}>
@@ -107,8 +107,8 @@ export default function ServicePage({ s }: { s: Service }) {
       <section className="sec py-20 lg:py-28">
         <div className="wrap grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
-            <p className="eyebrow reveal">Pricing</p>
-            <h2 className="reveal mt-4 text-[clamp(28px,3.4vw,40px)]">What it costs</h2>
+            <p className="eyebrow reveal">{site.name} pricing</p>
+            <h2 className="reveal mt-4 text-[clamp(28px,3.4vw,40px)]">What {s.name.toLowerCase()} costs</h2>
             <p className="reveal mt-5 text-[18px] text-muted">{s.price.lead}</p>
             <p className="reveal mt-4 text-[16px] text-faint">{s.price.note}</p>
             <Link href="/pricing/" className="btn btn-outline reveal mt-8">Full pricing guide</Link>
@@ -131,7 +131,7 @@ export default function ServicePage({ s }: { s: Service }) {
         <section className="sec-grey py-20 lg:py-28">
           <div className="wrap">
             <div className="flex flex-wrap items-end justify-between gap-6">
-              <SectionHead eyebrow="Our work" title="On real properties" />
+              <SectionHead eyebrow={`${site.name} work`} title="On real Lancaster County properties" />
               <Link href="/gallery/" className="btn btn-outline reveal">Full gallery</Link>
             </div>
             <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -148,7 +148,7 @@ export default function ServicePage({ s }: { s: Service }) {
       {/* FAQ */}
       <section className="sec py-20 lg:py-28">
         <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <SectionHead eyebrow="Questions" title={<>{s.name} FAQ</>} />
+          <SectionHead eyebrow={`Questions for ${site.short}`} title={<>{s.name} FAQ</>} />
           <FaqList faqs={s.faqs} />
         </div>
       </section>
@@ -156,7 +156,7 @@ export default function ServicePage({ s }: { s: Service }) {
       {/* Related */}
       <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead eyebrow="Keep going" title="Related services" />
+          <SectionHead eyebrow="Keep going" title={<>More from {site.name}</>} />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {related.map((r) => (
               <Link key={r.slug} href={`/${r.slug}/`} className="card reveal grid grid-cols-[88px_1fr] items-center gap-5 p-5">

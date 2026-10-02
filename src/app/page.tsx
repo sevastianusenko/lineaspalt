@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Photo, SectionHead, ReviewCard, Stars, PostCard, LeadSection, TownChips, FaqList, Icon } from "@/components/ui";
+import { Photo, SectionHead, ReviewCard, Stars, PostCard, LeadSection, TownChips, FaqList, Icon, GoogleBadge } from "@/components/ui";
 import PriceCalc from "@/components/PriceCalc";
 import { services } from "@/content/services";
 import { towns } from "@/content/towns";
@@ -10,9 +10,9 @@ import { site } from "@/lib/site";
 import { allImages } from "@/lib/images";
 
 export const metadata: Metadata = {
-  title: { absolute: "Line Striping & Asphalt Maintenance in Lancaster, PA" },
+  title: { absolute: "Lancaster Lines & Asphalt | Line Striping & Sealcoating, Lancaster PA" },
   description:
-    "Line striping, sealcoating, crack filling and pothole repair in Lancaster, PA. Locally owned, 5.0 on Google. Free estimates: 717-808-1600.",
+    "Lancaster Lines & Asphalt: line striping, sealcoating, crack filling and pothole repair in Lancaster, PA. Locally owned, 5.0 on Google. Free estimates: 717-808-1600.",
   alternates: { canonical: "/" },
 };
 
@@ -55,7 +55,7 @@ export default function Home() {
       <section className="sec relative overflow-hidden">
         <div className="wrap grid items-center gap-12 pb-16 pt-10 lg:grid-cols-[1fr_1fr] lg:gap-16 lg:pb-24 lg:pt-16">
           <div>
-            <p className="eyebrow rise">Locally owned &middot; {site.region}</p>
+            <p className="eyebrow rise">{site.name} &middot; Locally owned in {site.region}</p>
             <h1 className="rise mt-5 text-[clamp(36px,4.8vw,62px)]" style={{ animationDelay: "80ms" }}>
               Asphalt maintenance &amp; line striping experts in <mark className="hl">Lancaster, PA</mark>
             </h1>
@@ -69,7 +69,7 @@ export default function Home() {
             <dl className="rise mt-10 flex flex-wrap gap-x-10 gap-y-4 border-t border-border pt-7" style={{ animationDelay: "320ms" }}>
               <div>
                 <dt className="flex items-center gap-2"><Stars size={18} /></dt>
-                <dd className="mt-1 font-display text-[17px] font-bold text-black">5.0 on Google</dd>
+                <dd className="mt-1 font-display text-[17px] font-bold text-black"><a href={site.gbp.url} target="_blank" rel="noopener noreferrer" className="hover:underline">5.0 on Google</a></dd>
                 <dd className="text-[14px] text-muted">{site.rating.count} reviews</dd>
               </div>
               <div>
@@ -101,9 +101,10 @@ export default function Home() {
       {/* ---------------- CORE SERVICES: black band, white cards overlapping ---------------- */}
       <section className="sec-black pt-16 lg:pt-20">
         <div className="wrap text-center">
-          <h2 className="reveal text-[clamp(30px,3.6vw,44px)]">Our core services</h2>
+          <p className="eyebrow reveal justify-center">{site.name}</p>
+          <h2 className="reveal mt-4 text-[clamp(30px,3.6vw,44px)]">Our core services</h2>
           <p className="reveal mx-auto mt-4 max-w-2xl text-[18px] text-white/75">
-            We provide complete asphalt care for both residential and commercial properties, including:
+            {site.name} provides complete asphalt care for both residential and commercial properties, including:
           </p>
         </div>
         <div className="wrap mt-12 grid gap-6 md:grid-cols-3 translate-y-16">
@@ -128,7 +129,7 @@ export default function Home() {
       <section className="sec pb-20 lg:pb-28">
         <div className="wrap grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>
-            <SectionHead eyebrow="Why choose us" title={<>Your trusted <mark className="hl">pavement partner</mark></>} lead="We are more than a service. Our team delivers clean, durable results on every job, whether it is a small driveway or a large commercial lot." />
+            <SectionHead eyebrow="Why choose us" title={<>Why choose <mark className="hl">Lancaster Lines &amp; Asphalt</mark></>} lead={`${site.name} is more than a service. We are your trusted pavement partner, delivering clean, durable results on every job, whether it is a small driveway or a large commercial lot.`} />
             <ul className="mt-8 grid gap-4">
               {["Trusted by homeowners and businesses", "Fast and reliable", "Quality guaranteed", "5-star reputation"].map((t) => (
                 <li key={t} className="reveal flex items-center gap-4 font-display text-[18px] font-bold text-black">
@@ -157,7 +158,7 @@ export default function Home() {
             <SectionHead title={<>Solid work. <mark className="hl">Zero stress.</mark></>} />
             <div className="reveal mt-6 space-y-4 text-[18px] text-muted">
               <p>Tired of waiting, guessing, or calling companies that do not show up?</p>
-              <p>We believe in showing up, finishing strong, and leaving your surface better than new.</p>
+              <p>At {site.name} we believe in showing up, finishing strong, and leaving your surface better than new.</p>
               <p className="font-display text-[18px] font-bold text-black">No confusion. No mess. No excuses.</p>
               <p>Just straight answers, clean work, and real results.</p>
             </div>
@@ -169,7 +170,7 @@ export default function Home() {
       {/* ---------------- HOW WE WORK ---------------- */}
       <section className="sec py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead eyebrow="Working with us is easy" title="How we work" align="center" />
+          <SectionHead eyebrow={`Working with ${site.name} is easy`} title="How we work" align="center" />
           <ol className="mt-14 grid gap-6 md:grid-cols-3">
             {[
               ["Get in touch", "Request a free estimate by phone or online. We will schedule a quick site visit or review photos."],
@@ -189,13 +190,15 @@ export default function Home() {
       {/* ---------------- REVIEWS ---------------- */}
       <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead eyebrow="Customer reviews" title="What our customers are saying" align="center" />
+          <SectionHead eyebrow="Customer reviews" title={<>What customers say about {site.name}</>} align="center" />
           <div className="mt-12 grid gap-8 lg:grid-cols-[260px_1fr] lg:items-start">
             <div className="reveal card card-flat p-8 text-center lg:sticky lg:top-28">
               <p className="font-display text-[26px] font-bold text-black">EXCELLENT</p>
               <Stars className="mt-2 justify-center" size={28} />
               <p className="mt-3 text-[15px] text-muted">Based on <strong className="text-black">{site.rating.count} reviews</strong></p>
               <p className="mt-1 font-display text-[22px] font-bold text-black">Google</p>
+              <a href={site.gbp.url} target="_blank" rel="noopener noreferrer" className="more mt-4 !text-[14px]">See {site.short} on Google</a>
+              <a href={site.gbp.reviewUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm mt-4 w-full">Leave a review</a>
             </div>
             <div className="grid gap-5 md:grid-cols-2">
               {reviews.slice(0, 6).map((r, i) => (
@@ -212,7 +215,7 @@ export default function Home() {
       <section className="sec py-20 lg:py-28">
         <div className="wrap grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <div>
-            <SectionHead eyebrow="Straight talk on price" title={<>You get the price <mark className="hl">in writing</mark> before we start.</>} lead="Pick a service, enter the size, and see the range we typically charge in Lancaster County. It is built from the same numbers we use on real quotes." />
+            <SectionHead eyebrow="Straight talk on price" title={<>You get the price <mark className="hl">in writing</mark> before we start.</>} lead={`Pick a service, enter the size, and see the range ${site.name} typically charges in Lancaster County. It is built from the same numbers we use on real quotes.`} />
             <dl className="mt-10 grid gap-6 sm:grid-cols-3">
               {[
                 ["$400", "Minimum job"],
@@ -235,7 +238,7 @@ export default function Home() {
       <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHead eyebrow="Photo gallery" title="Our latest projects" />
+            <SectionHead eyebrow={`${site.name} photo gallery`} title="Our latest projects" />
             <Link href="/gallery/" className="btn btn-outline reveal">See all {allImages().length} photos</Link>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -251,7 +254,7 @@ export default function Home() {
       {/* ---------------- AREAS ---------------- */}
       <section className="sec py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead eyebrow="Service area" title={<>Within <mark className="hl">40 miles</mark> of Lancaster</>} lead="Pick your town for local details, or call and we will tell you if we cover you." />
+          <SectionHead eyebrow="Service area" title={<>Within <mark className="hl">40 miles</mark> of Lancaster</>} lead={`${site.name} works across Lancaster County and the surrounding area. Pick your town for local details, or call and we will tell you if we cover you.`} />
           <div className="reveal mt-10">
             <TownChips items={core.map((t) => ({ name: t.name, href: t.path }))} />
           </div>
@@ -272,7 +275,7 @@ export default function Home() {
       <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHead eyebrow="From the blog" title="Straight answers about asphalt" />
+            <SectionHead eyebrow={`From the ${site.name} blog`} title="Straight answers about asphalt" />
             <Link href="/blog/" className="btn btn-outline reveal">All articles</Link>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -286,7 +289,10 @@ export default function Home() {
       {/* ---------------- FAQ ---------------- */}
       <section className="sec py-20 lg:py-28">
         <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <SectionHead eyebrow="Questions" title="Quick answers" />
+          <div>
+            <SectionHead eyebrow="Questions" title={<>Quick answers from {site.short}</>} />
+            <GoogleBadge className="reveal mt-8" />
+          </div>
           <FaqList faqs={homeFaqs} />
         </div>
       </section>

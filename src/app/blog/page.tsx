@@ -4,7 +4,7 @@ import { Breadcrumbs, CtaBand, PageHero, Photo, PostCard } from "@/components/ui
 import { formatDate, getPosts, readMinutes } from "@/lib/posts";
 
 export const metadata: Metadata = {
-  title: { absolute: "Asphalt Blog: Sealcoating, Striping & Repair Guides" },
+  title: { absolute: "Asphalt Blog: Sealcoating, Striping & Repair Guides | Lines & Asphalt" },
   description:
     "Plain-English guides from a Lancaster County asphalt crew: sealcoating, crack filling, potholes, striping, ADA rules and what each job costs.",
   alternates: { canonical: "/blog/" },
@@ -20,7 +20,7 @@ export default function Blog() {
       <PageHero
         eyebrow="The blog"
         title={<>Straight answers <mark className="hl">about asphalt</mark></>}
-        lead="Guides from the crew: what sealcoating does, how crack filling works, what striping costs, and what ADA parking actually requires. No fluff."
+        lead="Guides from the Lancaster Lines & Asphalt crew: what sealcoating does, how crack filling works, what striping costs, and what ADA parking actually requires. No fluff."
         image="hot-pour-crack-sealing-crew"
       />
       <section className="sec-grey py-16 lg:py-24">

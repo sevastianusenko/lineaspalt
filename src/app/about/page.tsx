@@ -49,7 +49,7 @@ export default function About() {
 
       <section className="sec py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead eyebrow="How we work" title="Four things we hold to" align="center" />
+          <SectionHead eyebrow={`How ${site.name} works`} title="Four things we hold to" align="center" />
           <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               ["We show up", "On the day we said, at the time we said. If the weather will ruin the job, we call and reschedule instead of doing it wrong."],
@@ -98,8 +98,8 @@ export default function About() {
       <section className="sec py-20 lg:py-28">
         <div className="wrap">
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHead eyebrow="Reviews" title={<>5.0 on Google, {site.rating.count} reviews</>} />
-            <Stars className="reveal" size={28} />
+            <SectionHead eyebrow={`${site.name} on Google`} title={<>5.0 on Google, {site.rating.count} reviews</>} />
+            <div className="reveal flex flex-wrap items-center gap-4"><Stars size={28} /><a href={site.gbp.reviewUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">Leave a Google review</a></div>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {reviews.slice(0, 3).map((r) => (

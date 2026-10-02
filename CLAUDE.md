@@ -10,10 +10,10 @@ Rejected on 2026-10-02: a dark "asphalt" theme with Big Shoulders stencil type. 
 
 ## Facts that need the client
 
-- Phone: 717-808-1600 used everywhere. Old site also had (717) 454-9931 in schema and some pages. Confirm which is real.
-- Email: contact@linesasphalt.com (old schema had info@ too).
-- Address: not shown (service-area business). Old schema listed 150 E Main St, Strasburg PA 17579; schema here carries locality/zip only.
-- Hours Mon to Fri 8 to 6, Sat 9 to 2 came from the old schema. Unverified.
+- Google Business Profile (checked 2026-10-02 via maps cid 10068187502945296993): name "Lancaster Lines & Asphalt", category Asphalt contractor, 5.0 rating, address 150 E Main St, Strasburg, PA 17579, phone (717) 808-1600, website linesasphalt.com. Site NAP now matches it: address shown in footer, contact and schema. `site.gbp.url` links to the listing, `site.gbp.reviewUrl` opens the review dialog (ludocid/lrd link, no Place ID available).
+- Phone: 717-808-1600 confirmed by GBP. Old site also had (717) 454-9931; ignore it.
+- Email: contact@linesasphalt.com (old schema had info@ too). Not on GBP, unverified.
+- Hours: GBP only exposed "Friday 8 AM to 5 PM" to the scraper. Site shows Mon to Fri 8 to 5 as a best guess. Confirm the full week in the GBP manager and update `site.hours`.
 - PA Home Improvement Contractor registration number: not on the site. HICPA expects it in advertising for home improvement work. Add to footer + schema when known.
 - "Fully insured" comes from the old site. Insurance details not verified.
 - Socials: facebook.com/linesasphalt and instagram.com/linesasphalt from the old schema, not verified.

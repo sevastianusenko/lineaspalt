@@ -28,7 +28,7 @@ export default function Pricing() {
       <PageHero
         eyebrow="Straight talk on price"
         title={<>What asphalt work costs in <mark className="hl">Lancaster County</mark></>}
-        lead="We publish our ranges because most people do not get a straight answer. Use the quick check below, then ask for a written quote when you are ready."
+        lead="Lancaster Lines & Asphalt publishes its price ranges because most people do not get a straight answer. Use the quick check below, then ask for a written quote when you are ready."
         image="driveway-sealcoat-glossy-wet"
       >
         <Link href="/contact/" className="btn btn-yellow">Get a written quote</Link>
@@ -51,7 +51,7 @@ export default function Pricing() {
 
       <section className="sec py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead eyebrow="By service" title="Typical ranges, service by service" />
+          <SectionHead eyebrow="By service" title="Lancaster Lines & Asphalt ranges, service by service" />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {priced.map((s) => (
               <div key={s.slug} className="card card-flat reveal p-7 sm:p-8">

@@ -29,7 +29,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Gallery"
         title={<>Real jobs. Real lots. <mark className="hl">Real lines.</mark></>}
-        lead={`${items.length} photos from our own jobs across Lancaster County: striping, ADA stalls, sealcoating, crack filling and floors.`}
+        lead={`${items.length} photos from Lancaster Lines & Asphalt jobs across Lancaster County: striping, ADA stalls, sealcoating, crack filling and floors.`}
         image="warehouse-floor-line-marking-yellow-red"
       >
         <Link href="/contact/" className="btn btn-yellow">Start your project</Link>

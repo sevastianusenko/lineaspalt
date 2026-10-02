@@ -130,7 +130,7 @@ export function FaqList({ faqs, withSchema = true }: { faqs: Faq[]; withSchema?:
 }
 
 /* ---------- CTA band (black, like the old site's closing band) ---------- */
-export function CtaBand({ title = "Let's get your pavement done right.", text = "Free estimate. Clear written price. We usually reply within one business day." }: { title?: string; text?: string }) {
+export function CtaBand({ title = "Let's get your pavement done right.", text = `Call ${site.name} for a free estimate. Clear written price, and we usually reply within one business day.` }: { title?: string; text?: string }) {
   return (
     <section className="sec-black">
       <div className="wrap grid items-center gap-8 py-16 lg:grid-cols-[1.4fr_1fr] lg:py-20">
@@ -164,6 +164,19 @@ export function TownChips({ items }: { items: { name: string; href?: string }[] 
   );
 }
 
+/* ---------- Google Business Profile badge ---------- */
+export function GoogleBadge({ className = "" }: { className?: string }) {
+  return (
+    <a href={site.gbp.url} target="_blank" rel="noopener noreferrer" className={`card inline-flex items-center gap-3 px-4 py-3 ${className}`}>
+      <Stars size={16} />
+      <span className="text-[14px]">
+        <strong className="font-display text-black">{site.rating.value} on Google</strong>
+        <span className="text-muted"> &middot; {site.rating.count} reviews</span>
+      </span>
+    </a>
+  );
+}
+
 /* ---------- Reviews ---------- */
 export function Stars({ className = "", size = 20 }: { className?: string; size?: number }) {
   return (
@@ -188,7 +201,7 @@ export function ReviewCard({ r }: { r: Review }) {
       </figcaption>
       <Stars className="mt-4" size={18} />
       <blockquote className="mt-3 text-[16px] leading-relaxed text-[#333]">{r.text}</blockquote>
-      <p className="mt-auto pt-5 text-[13px] text-faint">Posted on Google</p>
+      <p className="mt-auto pt-5 text-[13px] text-faint">Google review of {site.name}</p>
     </figure>
   );
 }
@@ -216,7 +229,7 @@ export function LeadSection({ title = "Get your free quote", text, defaultServic
     <section className="sec-grey py-20 lg:py-28" id="quote">
       <div className="wrap grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
         <div>
-          <p className="eyebrow reveal">Free estimate</p>
+          <p className="eyebrow reveal">Free estimate from {site.name}</p>
           <h2 className="reveal mt-4 text-[clamp(30px,3.6vw,44px)]">{title}</h2>
           <p className="reveal mt-5 max-w-lg text-[18px] text-muted">
             {text ?? "Tell us what you see and where the property is. We call back within one business day, look at the job, and give you a written price."}

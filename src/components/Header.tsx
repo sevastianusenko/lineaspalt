@@ -31,9 +31,9 @@ export default function Header() {
     <>
       <header className={`sticky top-0 z-50 bg-white transition-shadow duration-200 ${scrolled || open ? "shadow-[0_6px_24px_-12px_rgba(0,0,0,.25)]" : ""}`}>
         <div className="wrap flex h-[84px] items-center justify-between gap-6">
-          <Link href="/" className="flex shrink-0 items-center" aria-label={`${site.name}, home`}>
+          <Link href="/" className="flex shrink-0 items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/logo-horizontal.png" alt="" width={244} height={67} className="h-[52px] w-auto sm:h-[60px]" />
+            <img src="/img/logo-horizontal.png" alt={`${site.name}, home`} width={244} height={67} className="h-[52px] w-auto sm:h-[60px]" />
           </Link>
 
           <nav aria-label="Main" className="hidden h-full items-stretch lg:flex">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import LeadForm from "@/components/LeadForm";
-import { Breadcrumbs, FaqList, SectionHead, TownChips } from "@/components/ui";
+import { Breadcrumbs, FaqList, GoogleBadge, SectionHead, TownChips } from "@/components/ui";
 import JsonLd from "@/components/JsonLd";
 import { towns } from "@/content/towns";
 import { abs, site } from "@/lib/site";
@@ -31,9 +31,9 @@ export default function Contact() {
         <div className="wrap grid gap-12 py-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-16">
           <div>
             <p className="eyebrow rise">Contact us today</p>
-            <h1 className="rise mt-4 text-[clamp(34px,4.4vw,58px)]" style={{ animationDelay: "80ms" }}>Free estimates. <mark className="hl">Fast reply.</mark></h1>
+            <h1 className="rise mt-4 text-[clamp(34px,4.4vw,58px)]" style={{ animationDelay: "80ms" }}>Contact <mark className="hl">{site.name}</mark></h1>
             <p className="rise mt-6 max-w-lg text-[19px] text-muted" style={{ animationDelay: "160ms" }}>
-              Sealcoating, crack filling, striping and pothole repair. Tell us what you see. We reply within one business day.
+              Free estimates, fast reply. Sealcoating, crack filling, striping and pothole repair. Tell us what you see and we reply within one business day.
             </p>
             <ul className="rise mt-10 grid gap-6" style={{ animationDelay: "240ms" }}>
               <li>
@@ -45,8 +45,9 @@ export default function Contact() {
                 <a href={`mailto:${site.email}`} className="mt-1 block text-[20px] text-black hover:underline">{site.email}</a>
               </li>
               <li>
-                <span className="eyebrow !text-[13px]">Service area</span>
-                <span className="mt-1 block text-[18px]">{site.region}, and about 40 miles around</span>
+                <span className="eyebrow !text-[13px]">Location</span>
+                <a href={site.gbp.url} target="_blank" rel="noopener noreferrer" className="mt-1 block text-[18px] hover:underline">{site.address.line}</a>
+                <span className="block text-[15px] text-muted">Serving {site.region}, and about 40 miles around</span>
               </li>
               <li>
                 <span className="eyebrow !text-[13px]">Hours</span>
@@ -57,6 +58,7 @@ export default function Contact() {
                 </dl>
               </li>
             </ul>
+            <GoogleBadge className="rise mt-8" />
           </div>
           <div className="rise card card-flat p-6 sm:p-9" style={{ animationDelay: "200ms" }}>
             <h2 className="text-[28px]">Send us a message</h2>
@@ -68,7 +70,7 @@ export default function Contact() {
 
       <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead eyebrow="Areas we serve" title={<>Lancaster County and <mark className="hl">40 miles around</mark></>} lead="We provide asphalt maintenance, sealcoating, line striping and pothole repair across Lancaster County and the communities around it." />
+          <SectionHead eyebrow="Areas we serve" title={<>Lancaster County and <mark className="hl">40 miles around</mark></>} lead={`${site.name} provides asphalt maintenance, sealcoating, line striping and pothole repair across Lancaster County and the communities around it.`} />
           <div className="reveal mt-10"><TownChips items={core.map((t) => ({ name: t.name, href: t.path }))} /></div>
         </div>
       </section>

@@ -53,7 +53,7 @@ export default function TownPage({ t }: { t: Town }) {
         <div className="wrap grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
             <p className="eyebrow reveal">Your local crew</p>
-            <h2 className="reveal mt-4 text-[clamp(28px,3.4vw,40px)]">Asphalt work in {t.name}</h2>
+            <h2 className="reveal mt-4 text-[clamp(28px,3.4vw,40px)]">{site.name} in {t.name}</h2>
           </div>
           <div className="space-y-6 text-[18px] leading-[1.8] text-[#333]">
             {t.intro.map((p, i) => (
@@ -65,7 +65,7 @@ export default function TownPage({ t }: { t: Town }) {
 
       <section className="sec py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead eyebrow="What we do" title={<>Services in <mark className="hl">{t.name}</mark></>} />
+          <SectionHead eyebrow={`What ${site.name} does`} title={<>Our services in <mark className="hl">{t.name}</mark></>} />
           <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {svc.map((s, i) => (
               <li key={s.name} className="reveal" style={{ transitionDelay: `${(i % 3) * 60}ms` }}>
@@ -82,7 +82,7 @@ export default function TownPage({ t }: { t: Town }) {
 
       <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead eyebrow="Who we work with" title={<>Properties we service in {t.name}</>} />
+          <SectionHead eyebrow="Who we work with" title={<>Properties {site.short} services in {t.name}</>} />
           <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {t.props.map(([title, d]) => (
               <li key={title} className="card card-flat reveal p-7">
@@ -97,7 +97,7 @@ export default function TownPage({ t }: { t: Town }) {
       <section className="sec-black py-20 lg:py-28">
         <div className="wrap">
           <p className="eyebrow reveal">Year-round</p>
-          <h2 className="reveal mt-4 max-w-3xl text-[clamp(30px,3.6vw,44px)]">What we do in {t.name} each season</h2>
+          <h2 className="reveal mt-4 max-w-3xl text-[clamp(30px,3.6vw,44px)]">What {site.name} does in {t.name} each season</h2>
           <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {seasons.map(([s, h, d], i) => (
               <li key={s} className="reveal border-t-4 border-yellow pt-5" style={{ transitionDelay: `${i * 70}ms` }}>
@@ -133,7 +133,7 @@ export default function TownPage({ t }: { t: Town }) {
 
       <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead eyebrow="Reviews" title="What customers say" />
+          <SectionHead eyebrow={`${site.name} reviews`} title="What customers say" />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {reviews.slice(1, 4).map((r) => (
               <div key={r.name} className="reveal"><ReviewCard r={r} /></div>
@@ -144,7 +144,7 @@ export default function TownPage({ t }: { t: Town }) {
 
       <section className="sec py-20 lg:py-28">
         <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <SectionHead eyebrow={`${t.name}, PA`} title={<>Questions about {t.name}</>} />
+          <SectionHead eyebrow={`${t.name}, PA`} title={<>Questions about {site.short} in {t.name}</>} />
           <FaqList faqs={faqs} />
         </div>
       </section>

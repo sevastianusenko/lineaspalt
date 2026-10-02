@@ -4,7 +4,7 @@ import { Breadcrumbs, CtaBand, Icon, PageHero, SectionHead } from "@/components/
 import { services } from "@/content/services";
 
 export const metadata: Metadata = {
-  title: { absolute: "Asphalt & Line Striping Services in Lancaster, PA" },
+  title: { absolute: "Asphalt & Line Striping Services in Lancaster, PA | Lines & Asphalt" },
   description:
     "Line striping, ADA and fire lane markings, sealcoating, crack filling and pothole repair in Lancaster County, PA. Free estimates: 717-808-1600.",
   alternates: { canonical: "/services/" },
@@ -23,7 +23,7 @@ export default function Services() {
       <PageHero
         eyebrow="Featured services"
         title={<>We provide the <mark className="hl">best services</mark></>}
-        lead="One local crew for the whole job: fill the cracks, fix the holes, seal the surface, paint the lines. Residential and commercial, anywhere within about 40 miles of Lancaster."
+        lead="Lancaster Lines & Asphalt is one local crew for the whole job: fill the cracks, fix the holes, seal the surface, paint the lines. Residential and commercial, anywhere within about 40 miles of Lancaster."
         image="retail-lot-restriped-blue-ada"
       >
         <div className="flex flex-wrap gap-4">

@@ -4,7 +4,7 @@ import { Breadcrumbs, CtaBand, PageHero, Photo, SectionHead, TownChips } from "@
 import { towns } from "@/content/towns";
 
 export const metadata: Metadata = {
-  title: { absolute: "Service Areas: Lancaster County, PA and Nearby" },
+  title: { absolute: "Service Areas: Lancaster County, PA and Nearby | Lines & Asphalt" },
   description:
     "Where Lancaster Lines & Asphalt works: Lancaster, Lititz, Ephrata, Manheim, Mount Joy, Strasburg and about 40 miles around. Free estimates.",
   alternates: { canonical: "/service-areas/" },
@@ -21,7 +21,7 @@ export default function Areas() {
       <PageHero
         eyebrow="Where we work"
         title={<>Serving Lancaster County and <mark className="hl">40 miles around</mark></>}
-        lead="Driveways, parking lots and floors from the Susquehanna to the Berks line. Pick your town for local details, or call and we will tell you if we cover you."
+        lead="Lancaster Lines & Asphalt takes care of driveways, parking lots and floors from the Susquehanna to the Berks line. Pick your town for local details, or call and we will tell you if we cover you."
         image="driveway-sealcoat-wide-apron"
       >
         <a href="tel:+17178081600" className="btn btn-yellow">Call 717-808-1600</a>
