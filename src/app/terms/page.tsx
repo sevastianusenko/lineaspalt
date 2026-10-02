@@ -12,10 +12,10 @@ export default function Terms() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Terms", href: "/terms/" }]} />
-      <section className="sec-dark grain py-14 lg:py-20">
+      <section className="sec py-14 lg:py-20">
         <div className="wrap-narrow">
-          <h1 className="text-[clamp(44px,7vw,84px)]">Terms of use</h1>
-          <p className="mt-3 text-asphalt-300">Last updated: October 1, 2026</p>
+          <h1 className="text-[clamp(32px,4.4vw,54px)]">Terms of use</h1>
+          <p className="mt-3 text-muted">Last updated: October 1, 2026</p>
           <div className="prose mt-8">
             <p>These terms cover the use of this website, operated by {site.legalName}. By using the site you agree to them.</p>
             <h2>Estimates and price ranges</h2>

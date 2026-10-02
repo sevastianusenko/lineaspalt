@@ -45,9 +45,9 @@ export default function PriceCalc() {
   const est = useMemo(() => estimate(mode, n), [mode, n]);
 
   return (
-    <div className="chamfer bg-asphalt-800 p-6 sm:p-9">
-      <p className="stencil text-[15px] tracking-[0.16em] text-paint">Quick price check</p>
-      <h3 className="mt-2 text-[34px] sm:text-[42px]">What will it roughly cost?</h3>
+    <div className="card card-flat p-6 sm:p-9">
+      <p className="eyebrow">Quick price check</p>
+      <h3 className="mt-3 text-[26px] sm:text-[30px]">What will it roughly cost?</h3>
 
       <div role="tablist" aria-label="Service" className="mt-6 flex flex-wrap gap-2">
         {modes.map((x) => (
@@ -56,7 +56,7 @@ export default function PriceCalc() {
             role="tab"
             aria-selected={mode === x.key}
             onClick={() => setMode(x.key)}
-            className={`shrink-0 px-4 py-2.5 font-display text-[18px] font-bold uppercase tracking-[0.05em] transition-colors ${mode === x.key ? "bg-paint text-black" : "bg-asphalt-700 text-line hover:bg-asphalt-600"}`}
+            className={`px-4 py-2.5 font-display text-[15px] font-bold transition-colors ${mode === x.key ? "bg-yellow text-black" : "bg-grey text-ink hover:bg-grey-2"}`}
           >
             {x.label}
           </button>
@@ -69,26 +69,25 @@ export default function PriceCalc() {
           <input
             id="pc-n"
             inputMode="numeric"
-            className="field !text-[26px] font-bold"
+            className="field !text-[22px] font-bold"
             value={vals[mode]}
             placeholder={m.placeholder}
             onChange={(e) => setVals((v) => ({ ...v, [mode]: e.target.value.replace(/[^\d]/g, "") }))}
           />
-          {mode === "seal" && <p className="mt-2 text-[14px] text-asphalt-300">Tip: length times width. A 20 ft by 60 ft driveway is 1,200 sq ft.</p>}
+          {mode === "seal" && <p className="mt-2 text-[14px] text-faint">Tip: length times width. A 20 ft by 60 ft driveway is 1,200 sq ft.</p>}
         </div>
-        <div aria-live="polite">
+        <div aria-live="polite" className="border-t-4 border-yellow pt-4">
           <p className="lbl !mb-1">Typical range</p>
-          <p className="font-display text-[clamp(52px,8vw,76px)] font-extrabold leading-none text-paint">
+          <p className="font-display text-[clamp(34px,4.6vw,48px)] font-bold leading-none text-black">
             {est.low ? (est.low === est.high ? money(est.low) : `${money(est.low)} to ${money(est.high)}`) : "$0"}
           </p>
         </div>
       </div>
 
-      <p className="mt-5 text-[16px] text-asphalt-300">{est.note}</p>
-      <div className="dash-line mt-6 opacity-70" aria-hidden />
-      <div className="mt-6 flex flex-wrap items-center gap-4">
-        <Link href="/contact/" className="btn btn-paint">Get an exact quote</Link>
-        <p className="text-[14px] text-asphalt-300">A planning range, not a quote. Our minimum job is $400. Final price comes after we see the job.</p>
+      <p className="mt-5 text-[15px] text-muted">{est.note}</p>
+      <div className="mt-6 flex flex-wrap items-center gap-4 border-t border-border pt-6">
+        <Link href="/contact/" className="btn btn-black">Get an exact quote</Link>
+        <p className="text-[13px] text-faint">A planning range, not a quote. Our minimum job is $400. Final price comes after we see the job.</p>
       </div>
     </div>
   );

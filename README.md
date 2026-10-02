@@ -36,6 +36,7 @@ Never run `next build` while `next dev` is running on the same folder (corrupts 
 - `scripts/process-images.mjs` : source photos to `public/img/*.webp` (1600px + 640px thumbs) and `src/content/images.json`. Add a photo = add a line in that file.
 - `scripts/make-og.mjs` : 1200x630 JPG social images into `public/og/`.
 - `scripts/logo.mjs` : transparent logo mark from the original PNG, plus favicons.
+- `scripts/icons.mjs` : client icon set to `public/icons/*.png` and the trimmed horizontal logo.
 - `scripts/count-words.mjs` : refreshes `words:` in post frontmatter.
 - `scripts/check-links.mjs` : crawl a running server (`BASE=http://localhost:3100`), checks links, images, titles, descriptions, canonicals, H1 count.
 - `scripts/shots.mjs` : Playwright viewport screenshots (see windows tooling notes in memory).

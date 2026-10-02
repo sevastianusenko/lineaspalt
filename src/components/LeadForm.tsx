@@ -39,19 +39,19 @@ export default function LeadForm({ defaultService = "", compact = false }: { def
 
   if (state === "done") {
     return (
-      <div className="chamfer bg-asphalt-800 p-8" role="status">
-        <p className="stencil text-[15px] tracking-[0.16em] text-paint">Request received</p>
-        <h3 className="mt-2 text-[34px] text-line">Thanks. We will call you soon.</h3>
-        <p className="mt-3 text-asphalt-300">
+      <div className="border-t-4 border-yellow bg-grey p-8" role="status">
+        <p className="eyebrow">Request received</p>
+        <h3 className="mt-3 text-[26px]">Thanks. We will call you soon.</h3>
+        <p className="mt-3 text-muted">
           We reply to every request within one business day. If it is urgent, call{" "}
-          <a href={`tel:${site.phoneTel}`} className="text-paint underline underline-offset-4">{site.phone}</a>.
+          <a href={`tel:${site.phoneTel}`} className="font-bold text-black underline underline-offset-4">{site.phone}</a>.
         </p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid gap-4" noValidate={false}>
+    <form onSubmit={onSubmit} className="grid gap-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label className="lbl" htmlFor="lf-name">Name</label>
@@ -92,13 +92,13 @@ export default function LeadForm({ defaultService = "", compact = false }: { def
         <label>Leave this empty<input name="company" tabIndex={-1} autoComplete="off" /></label>
       </div>
       <div className="flex flex-wrap items-center gap-4">
-        <button type="submit" className="btn btn-paint" disabled={state === "sending"}>
-          {state === "sending" ? "Sending..." : "Get my free quote"}
+        <button type="submit" className="btn btn-yellow" disabled={state === "sending"}>
+          {state === "sending" ? "Sending..." : "Submit request"}
         </button>
-        <span className="text-[15px] text-asphalt-300">Free estimate. No obligation. Reply within one business day.</span>
+        <span className="text-[14px] text-faint">Free estimate. No obligation. Reply within one business day.</span>
       </div>
       {state === "error" && (
-        <p role="alert" className="text-[16px] text-[#ff8a80]">
+        <p role="alert" className="text-[16px] text-[#b3261e]">
           {err} You can also call us at <a className="underline" href={`tel:${site.phoneTel}`}>{site.phone}</a>.
         </p>
       )}

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Photo, SectionHead, ReviewCard, Stars, PostCard, LeadSection, TownSigns, FaqList } from "@/components/ui";
+import { Photo, SectionHead, ReviewCard, Stars, PostCard, LeadSection, TownChips, FaqList, Icon } from "@/components/ui";
 import PriceCalc from "@/components/PriceCalc";
-import { services, bySlug } from "@/content/services";
+import { services } from "@/content/services";
 import { towns } from "@/content/towns";
 import { reviews } from "@/content/reviews";
 import { getPosts } from "@/lib/posts";
@@ -16,26 +16,21 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const marquee = ["Line striping", "Sealcoating", "Crack filling", "Pothole repair", "ADA markings", "Fire lanes", "Parking lots", "Driveways"];
-
-const rows = [
-  { slug: "line-striping-service-lancaster-pa", n: "01", name: "Line striping", copy: "Stalls, arrows, stencils, fire lanes and ADA markings for lots and floors.", photo: "retail-lot-fresh-yellow-stripes" },
-  { slug: "sealcoating-lancaster-pa", n: "02", name: "Sealcoating", copy: "Two coats, hand-cut edges and real prep, for driveways and commercial lots.", photo: "driveway-sealcoat-orange-cones" },
-  { slug: "crack-filling-lancaster-pa", n: "03", name: "Crack filling", copy: "Hot rubber sealant that stays flexible, so water stays out all winter.", photo: "hot-pour-crack-sealing-melter" },
-  { slug: "pothole-repair-lancaster-pa", n: "04", name: "Pothole repair", copy: "Square cut, base checked, hot mix compacted in lifts. Repairs that stay put.", photo: "private-lane-fresh-asphalt" },
-  { slug: "ada-parking-lot-striping-lancaster-pa", n: "05", name: "ADA and fire lanes", copy: "Accessible stalls, aisles and curbs measured against the standard before we paint.", photo: "ada-stall-white-outline-brick-building" },
+const core3 = [
+  { icon: "striper", name: "Striping", copy: "Clean, accurate lines for parking lots, roads, fire lanes, ADA compliance and more.", href: "/line-striping-service-lancaster-pa/" },
+  { icon: "coating", name: "Protection", copy: "Sealcoating, crack filling and surface coating to protect and extend pavement life.", href: "/sealcoating-lancaster-pa/" },
+  { icon: "repair", name: "Repair", copy: "Pothole patching and surface restoration for damaged asphalt.", href: "/pothole-repair-lancaster-pa/" },
 ];
 
 const work = [
-  { slug: "warehouse-floor-line-marking-yellow-red", span: "col-span-2 row-span-2" },
-  { slug: "driveway-sealcoat-fall-tree", span: "" },
-  { slug: "ada-blue-symbol-night-striping", span: "" },
-  { slug: "retail-lot-yellow-stalls-ada-curb", span: "" },
-  { slug: "hot-pour-crack-sealing-crew", span: "" },
-  { slug: "driveway-sealcoat-glossy-wet", span: "" },
-  { slug: "reserved-stencil-night", span: "" },
-  { slug: "church-lot-ada-hatched-stalls", span: "" },
-  { slug: "lot-arrows-white-center-line", span: "" },
+  "warehouse-floor-line-marking-yellow-red",
+  "driveway-sealcoat-fall-tree",
+  "ada-blue-symbol-night-striping",
+  "retail-lot-yellow-stalls-ada-curb",
+  "hot-pour-crack-sealing-crew",
+  "driveway-sealcoat-glossy-wet",
+  "reserved-stencil-night",
+  "church-lot-ada-hatched-stalls",
 ];
 
 const homeFaqs = [
@@ -47,181 +42,144 @@ const homeFaqs = [
   { q: "When is the best time to sealcoat or stripe?", a: "Late spring through early fall, whenever the surface is above about 50 degrees F and dry. Crack filling is best in fall, before winter." },
 ];
 
+const Arrow = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+);
+
 export default function Home() {
-  const posts = getPosts().slice(0, 3);
+  const posts = getPosts().slice(0, 6);
   const core = towns.filter((t) => t.tier === "core");
   return (
     <>
       {/* ---------------- HERO ---------------- */}
-      <section className="sec-deep grain relative overflow-hidden">
-        <div className="wrap grid items-center gap-10 pb-16 pt-10 lg:grid-cols-[1.05fr_1fr] lg:gap-6 lg:pb-24 lg:pt-16">
-          <div className="relative z-10">
-            <p className="tag rise">Locally owned &middot; {site.region}</p>
-            <h1 className="rise mt-5 text-[clamp(54px,6.9vw,102px)] leading-[0.92]" style={{ animationDelay: "90ms" }}>
-              Straight lines.
-              <br />
-              <span className="text-paint">Sealed</span> surfaces.
+      <section className="sec relative overflow-hidden">
+        <div className="wrap grid items-center gap-12 pb-16 pt-10 lg:grid-cols-[1fr_1fr] lg:gap-16 lg:pb-24 lg:pt-16">
+          <div>
+            <p className="eyebrow rise">Locally owned &middot; {site.region}</p>
+            <h1 className="rise mt-5 text-[clamp(36px,4.8vw,62px)]" style={{ animationDelay: "80ms" }}>
+              Asphalt maintenance &amp; line striping experts in <mark className="hl">Lancaster, PA</mark>
             </h1>
-            <p className="rise mt-7 max-w-xl text-[clamp(18px,2vw,22px)] text-asphalt-300" style={{ animationDelay: "180ms" }}>
-              Line striping, sealcoating, crack filling and pothole repair for homes and businesses within 40 miles of Lancaster, PA. Clean work, honest prices, and a crew that shows up.
+            <p className="rise mt-6 max-w-xl text-[19px] text-muted" style={{ animationDelay: "160ms" }}>
+              Lancaster Lines &amp; Asphalt provides professional sealcoating, crack filling, striping and pothole repair for residential and commercial clients within 40 miles of Lancaster.
             </p>
-            <div className="rise mt-9 flex flex-wrap gap-4" style={{ animationDelay: "260ms" }}>
-              <Link href="/contact/" className="btn btn-paint">Free quote</Link>
-              <a href={`tel:${site.phoneTel}`} className="btn btn-ghost">Call {site.phone}</a>
+            <div className="rise mt-9 flex flex-wrap gap-4" style={{ animationDelay: "240ms" }}>
+              <Link href="/contact/" className="btn btn-yellow">Free Quote <Arrow /></Link>
+              <a href={`tel:${site.phoneTel}`} className="btn btn-outline">Call {site.phone}</a>
             </div>
-            <dl className="rise mt-10 grid max-w-xl grid-cols-2 gap-x-6 gap-y-4 border-t-2 border-white/15 pt-6 sm:grid-cols-3" style={{ animationDelay: "340ms" }}>
+            <dl className="rise mt-10 flex flex-wrap gap-x-10 gap-y-4 border-t border-border pt-7" style={{ animationDelay: "320ms" }}>
               <div>
-                <dt className="flex items-center gap-2"><Stars /></dt>
-                <dd className="mt-1 font-display text-[26px] font-bold uppercase leading-none tracking-wide">5.0 on Google</dd>
-                <dd className="text-[14px] text-asphalt-300">{site.rating.count} reviews</dd>
+                <dt className="flex items-center gap-2"><Stars size={18} /></dt>
+                <dd className="mt-1 font-display text-[17px] font-bold text-black">5.0 on Google</dd>
+                <dd className="text-[14px] text-muted">{site.rating.count} reviews</dd>
               </div>
               <div>
-                <dt className="stencil text-[14px] tracking-[0.16em] text-paint">Estimates</dt>
-                <dd className="mt-1 font-display text-[26px] font-bold uppercase leading-none tracking-wide">Free</dd>
-                <dd className="text-[14px] text-asphalt-300">Written price</dd>
+                <dt className="text-[14px] text-muted">Estimates</dt>
+                <dd className="mt-1 font-display text-[17px] font-bold text-black">Free, in writing</dd>
+                <dd className="text-[14px] text-muted">Minimum job ${site.minJob}</dd>
               </div>
-              <div className="col-span-2 sm:col-span-1">
-                <dt className="stencil text-[14px] tracking-[0.16em] text-paint">Coverage</dt>
-                <dd className="mt-1 font-display text-[26px] font-bold uppercase leading-none tracking-wide">Fully insured</dd>
-                <dd className="text-[14px] text-asphalt-300">Homes and businesses</dd>
+              <div>
+                <dt className="text-[14px] text-muted">Coverage</dt>
+                <dd className="mt-1 font-display text-[17px] font-bold text-black">Fully insured</dd>
+                <dd className="text-[14px] text-muted">Homes and businesses</dd>
               </div>
             </dl>
           </div>
 
-          <div className="relative h-[420px] sm:h-[520px] lg:h-[640px]" aria-hidden={false}>
-            <div className="trio">
-              {[
-                { s: "warehouse-floor-line-marking-yellow-red", d: 150 },
-                { s: "retail-lot-yellow-stalls-ada-curb", d: 280 },
-                { s: "driveway-sealcoat-glossy-wet", d: 410 },
-              ].map((p) => (
-                <div key={p.s} className="stall-p rise" style={{ animationDelay: `${p.d}ms` }}>
-                  <Photo slug={p.s} priority className="" />
-                </div>
-              ))}
+          {/* photo collage with rounded corners and the yellow circle, like the old site */}
+          <div className="relative">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
+              <div className="rise photo aspect-square" style={{ animationDelay: "150ms" }}><Photo slug="warehouse-floor-line-marking-yellow-red" small priority /></div>
+              <div className="rise photo aspect-square" style={{ animationDelay: "230ms" }}><Photo slug="retail-lot-yellow-stalls-ada-curb" small priority /></div>
+              <div className="rise photo hidden row-span-2 sm:block" style={{ animationDelay: "310ms" }}><Photo slug="hot-pour-crack-sealing-melter" priority /></div>
+              <div className="rise photo col-span-2 aspect-[2/1.1]" style={{ animationDelay: "390ms" }}><Photo slug="driveway-sealcoat-glossy-wet" priority /></div>
             </div>
-            {/* painted center line that draws on load */}
-            <div className="dash-line dash-grow pointer-events-none absolute -bottom-3 left-[-4%] w-[108%]" aria-hidden />
+            <span aria-hidden className="pop absolute -bottom-10 -right-6 hidden h-[110px] w-[110px] rounded-full bg-yellow sm:block lg:-right-10" />
           </div>
         </div>
-        <div className="double-line" aria-hidden />
       </section>
 
-      {/* ---------------- MARQUEE ---------------- */}
-      <section className="sec-yellow overflow-hidden py-4" aria-label="Services at a glance">
-        <div className="marquee" aria-hidden>
-          {[...marquee, ...marquee, ...marquee, ...marquee].map((m, i) => (
-            <span key={i} className="flex items-center font-display text-[30px] font-extrabold uppercase tracking-[0.06em] sm:text-[38px]">
-              {m}
-              <span className="mx-6 inline-block h-[10px] w-[44px] bg-black sm:mx-8" />
-            </span>
-          ))}
-        </div>
-        <p className="sr-only">Line striping, sealcoating, crack filling, pothole repair, ADA markings, fire lanes.</p>
-      </section>
-
-      {/* ---------------- SERVICES ---------------- */}
-      <section className="sec-dark grain py-20 lg:py-28">
-        <div className="wrap">
-          <SectionHead tag="What we do" title={<>Five jobs. <span className="text-paint">Done in the right order.</span></>} lead="Most pavement problems are solved by doing the same few things well: fill the cracks, fix the holes, seal the surface, paint the lines. One crew handles all of it." />
-          <ul className="mt-14 border-t-2 border-white/15">
-            {rows.map((r) => {
-              const s = bySlug(r.slug)!;
-              return (
-                <li key={r.slug} className="reveal group relative border-b-2 border-white/15">
-                  <Link href={`/${r.slug}/`} className="grid items-center gap-6 py-8 sm:grid-cols-[90px_1fr_240px] lg:grid-cols-[120px_1fr_300px] lg:py-10" aria-label={s.name}>
-                    <span className="stencil text-[clamp(44px,6vw,84px)] leading-none text-paint/90 transition-colors group-hover:text-paint-hot">{r.n}</span>
-                    <span>
-                      <span className="block font-display text-[clamp(38px,5.2vw,68px)] font-extrabold uppercase leading-[0.95] transition-colors group-hover:text-paint">{r.name}</span>
-                      <span className="mt-3 block max-w-xl text-[18px] text-asphalt-300">{r.copy}</span>
-                      <span className="mt-4 inline-flex items-center gap-3 font-display text-[19px] font-bold uppercase tracking-[0.08em] text-paint">
-                        See details
-                        <svg width="30" height="14" viewBox="0 0 30 14" fill="currentColor" className="transition-transform group-hover:translate-x-2" aria-hidden><path d="M0 5h22V0l8 7-8 7V9H0z" /></svg>
-                      </span>
-                    </span>
-                    <span className="stall-r relative hidden aspect-[3/2] overflow-hidden bg-asphalt-700 sm:block">
-                      <Photo slug={r.photo} small className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-          <p className="reveal mt-8 text-[18px] text-asphalt-300">
-            Also: <Link href="/fire-lane-marking-lancaster-pa/" className="text-paint underline underline-offset-4">fire lane marking</Link>,{" "}
-            <Link href="/warehouse-floor-line-marking-lancaster-pa/" className="text-paint underline underline-offset-4">warehouse floor marking</Link>,{" "}
-            <Link href="/driveway-sealcoating-lancaster-pa/" className="text-paint underline underline-offset-4">driveway sealcoating</Link> and{" "}
-            <Link href="/parking-lot-maintenance-lancaster-pa/" className="text-paint underline underline-offset-4">parking lot maintenance plans</Link>.{" "}
-            <Link href="/services/" className="text-paint underline underline-offset-4">View all {services.length} services</Link>.
+      {/* ---------------- CORE SERVICES: black band, white cards overlapping ---------------- */}
+      <section className="sec-black pt-16 lg:pt-20">
+        <div className="wrap text-center">
+          <h2 className="reveal text-[clamp(30px,3.6vw,44px)]">Our core services</h2>
+          <p className="reveal mx-auto mt-4 max-w-2xl text-[18px] text-white/75">
+            We provide complete asphalt care for both residential and commercial properties, including:
           </p>
         </div>
+        <div className="wrap mt-12 grid gap-6 md:grid-cols-3 translate-y-16">
+          {core3.map((c, i) => (
+            <Link key={c.name} href={c.href} className="card reveal flex flex-col items-center p-10 text-center" style={{ transitionDelay: `${i * 80}ms` }}>
+              <span className="icon-tile"><Icon name={c.icon} size={88} /></span>
+              <h3 className="mt-4 text-[24px]">{c.name}</h3>
+              <p className="mt-3 text-[16px] text-muted">{c.copy}</p>
+              <span className="more mt-6">Learn more <Arrow /></span>
+            </Link>
+          ))}
+        </div>
       </section>
-
-      {/* ---------------- FULL-BLEED PRICE TALK ---------------- */}
-      <section className="relative isolate overflow-hidden">
-        <Photo slug="driveway-sealcoat-autumn-garage" className="absolute inset-0 -z-20 h-full w-full object-cover" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/95 via-black/80 to-black/30" />
-        <div className="wrap py-24 lg:py-36">
-          <p className="tag reveal">No guessing</p>
-          <h2 className="reveal mt-4 max-w-4xl text-[clamp(48px,8vw,116px)]">
-            You get the price <span className="text-paint">in writing</span> before we touch the surface.
-          </h2>
-          <div className="mt-12 grid max-w-4xl gap-8 sm:grid-cols-3">
-            {[
-              ["$400", "Our minimum job. Crew, equipment and travel cost the same on a small job."],
-              ["$400 to $700", "What most residential driveways cost to sealcoat in Lancaster County."],
-              ["$4 to $6", "Per stall to re-stripe a lot over existing lines. New layouts run $8 to $12."],
-            ].map(([big, small]) => (
-              <div key={big} className="reveal border-t-[6px] border-paint pt-4">
-                <p className="font-display whitespace-nowrap text-[clamp(38px,3.8vw,50px)] font-extrabold leading-none text-paint">{big}</p>
-                <p className="mt-3 text-[17px] text-line/85">{small}</p>
-              </div>
-            ))}
-          </div>
-          <Link href="/pricing/" className="btn btn-paint reveal mt-12">See the full pricing guide</Link>
+      <section className="sec pb-20 pt-32 lg:pb-24 lg:pt-36">
+        <div className="wrap flex flex-wrap justify-center gap-4">
+          <Link href="/services/" className="btn btn-black">View all {services.length} services</Link>
+          <Link href="/contact/" className="btn btn-outline">Contact us now</Link>
         </div>
       </section>
 
-      {/* ---------------- WORK ---------------- */}
-      <section className="sec-deep grain py-20 lg:py-28">
-        <div className="wrap">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHead tag="Recent work" title={<>Real jobs. <span className="text-paint">Real Lancaster County lots.</span></>} />
-            <Link href="/gallery/" className="btn btn-ghost reveal">See all {allImages().length} photos</Link>
+      {/* ---------------- WHY CHOOSE US ---------------- */}
+      <section className="sec pb-20 lg:pb-28">
+        <div className="wrap grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+          <div>
+            <SectionHead eyebrow="Why choose us" title={<>Your trusted <mark className="hl">pavement partner</mark></>} lead="We are more than a service. Our team delivers clean, durable results on every job, whether it is a small driveway or a large commercial lot." />
+            <ul className="mt-8 grid gap-4">
+              {["Trusted by homeowners and businesses", "Fast and reliable", "Quality guaranteed", "5-star reputation"].map((t) => (
+                <li key={t} className="reveal flex items-center gap-4 font-display text-[18px] font-bold text-black">
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-yellow">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a0500" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M5 12l5 5L20 7" /></svg>
+                  </span>
+                  {t}
+                </li>
+              ))}
+            </ul>
+            <Link href="/about/" className="btn btn-outline reveal mt-9">About the company</Link>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 md:grid-rows-[repeat(3,minmax(0,260px))]">
-            {work.map((w, i) => (
-              <Link key={w.slug} href="/gallery/" className={`reveal group relative block overflow-hidden bg-asphalt-800 ${w.span} ${i === 0 ? "aspect-[4/5] md:aspect-auto" : "aspect-[4/5] md:aspect-auto"}`} style={{ transitionDelay: `${i * 50}ms` }}>
-                <Photo slug={w.slug} small={i !== 0} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <span className="absolute inset-x-0 bottom-0 h-[6px] origin-left scale-x-0 bg-paint transition-transform duration-300 group-hover:scale-x-100" />
-              </Link>
-            ))}
+          <div className="reveal photo aspect-[4/3]">
+            <Photo slug="driveway-sealcoat-fall-tree" />
           </div>
         </div>
       </section>
 
-      {/* ---------------- PROCESS ---------------- */}
-      <section className="sec-light grain py-20 lg:py-28">
+      {/* ---------------- SOLID WORK ---------------- */}
+      <section className="sec-grey py-20 lg:py-28">
+        <div className="wrap grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+          <div className="reveal photo aspect-[4/3] lg:order-none">
+            <Photo slug="warehouse-red-yellow-lines-close" />
+          </div>
+          <div>
+            <SectionHead title={<>Solid work. <mark className="hl">Zero stress.</mark></>} />
+            <div className="reveal mt-6 space-y-4 text-[18px] text-muted">
+              <p>Tired of waiting, guessing, or calling companies that do not show up?</p>
+              <p>We believe in showing up, finishing strong, and leaving your surface better than new.</p>
+              <p className="font-display text-[18px] font-bold text-black">No confusion. No mess. No excuses.</p>
+              <p>Just straight answers, clean work, and real results.</p>
+            </div>
+            <Link href="/contact/" className="btn btn-black reveal mt-8">Get started</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------- HOW WE WORK ---------------- */}
+      <section className="sec py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead tag="How it works" title={<>Three steps. <span className="text-[#8a5c00]">No runaround.</span></>} />
-          <ol className="mt-14 grid gap-10 lg:grid-cols-3 lg:gap-0">
+          <SectionHead eyebrow="Working with us is easy" title="How we work" align="center" />
+          <ol className="mt-14 grid gap-6 md:grid-cols-3">
             {[
-              ["Call or send the form", "Tell us where the property is and what you see. Photos are welcome. We reply within one business day."],
-              ["We look and quote", "We visit the property or review your photos, measure, and give you a clear written price. No obligation."],
-              ["The crew shows up", "On time, in order: fill, patch, seal, stripe. We clean up and walk the job with you at the end."],
+              ["Get in touch", "Request a free estimate by phone or online. We will schedule a quick site visit or review photos."],
+              ["Get a quote", "We provide a clear, no-obligation quote based on your project size, condition, and goals."],
+              ["Get it done", "Our crew arrives on time, does clean professional work, and leaves your pavement looking new."],
             ].map(([t, d], i) => (
-              <li key={t} className="reveal relative lg:px-8 lg:first:pl-0 lg:last:pr-0" style={{ transitionDelay: `${i * 90}ms` }}>
-                <div className="flex items-center gap-4">
-                  <span className="stencil text-[88px] leading-none text-ink">{String(i + 1).padStart(2, "0")}</span>
-                  {i < 2 && (
-                    <svg className="hidden flex-1 lg:block" height="22" viewBox="0 0 300 22" preserveAspectRatio="none" aria-hidden>
-                      <path d="M0 11 H270" stroke="#0e1012" strokeWidth="6" strokeDasharray="30 18" fill="none" />
-                      <path d="M268 0 L298 11 L268 22Z" fill="#0e1012" />
-                    </svg>
-                  )}
-                </div>
-                <h3 className="mt-4 text-[38px]">{t}</h3>
-                <p className="mt-3 max-w-sm text-[18px] text-[#2b2e31]">{d}</p>
+              <li key={t} className="card card-flat reveal p-10 text-center" style={{ transitionDelay: `${i * 80}ms` }}>
+                <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-yellow font-display text-[24px] font-bold text-black">{i + 1}</span>
+                <h3 className="mt-6 text-[24px]">{t}</h3>
+                <p className="mt-3 text-[16px] text-muted">{d}</p>
               </li>
             ))}
           </ol>
@@ -229,18 +187,19 @@ export default function Home() {
       </section>
 
       {/* ---------------- REVIEWS ---------------- */}
-      <section className="sec-dark grain py-20 lg:py-28">
+      <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="lg:sticky lg:top-28 lg:self-start">
-              <p className="tag reveal">Customer reviews</p>
-              <p className="reveal mt-4 font-display text-[clamp(110px,16vw,210px)] font-extrabold leading-[0.8] text-paint">5.0</p>
-              <Stars className="reveal mt-4 scale-125 origin-left" />
-              <p className="reveal mt-4 text-[19px] text-asphalt-300">Based on {site.rating.count} Google reviews. Every one comes from a real job in Lancaster County.</p>
+          <SectionHead eyebrow="Customer reviews" title="What our customers are saying" align="center" />
+          <div className="mt-12 grid gap-8 lg:grid-cols-[260px_1fr] lg:items-start">
+            <div className="reveal card card-flat p-8 text-center lg:sticky lg:top-28">
+              <p className="font-display text-[26px] font-bold text-black">EXCELLENT</p>
+              <Stars className="mt-2 justify-center" size={28} />
+              <p className="mt-3 text-[15px] text-muted">Based on <strong className="text-black">{site.rating.count} reviews</strong></p>
+              <p className="mt-1 font-display text-[22px] font-bold text-black">Google</p>
             </div>
-            <div className="grid gap-5 sm:grid-cols-2">
-              {reviews.slice(0, 5).map((r, i) => (
-                <div key={r.name} className={`reveal h-full ${i === 0 ? "sm:col-span-2" : ""}`} style={{ transitionDelay: `${(i % 2) * 90}ms` }}>
+            <div className="grid gap-5 md:grid-cols-2">
+              {reviews.slice(0, 6).map((r, i) => (
+                <div key={r.name} className="reveal" style={{ transitionDelay: `${(i % 2) * 90}ms` }}>
                   <ReviewCard r={r} />
                 </div>
               ))}
@@ -249,60 +208,85 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- CALC ---------------- */}
-      <section className="sec-deep grain py-20 lg:py-28">
-        <div className="wrap grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
+      {/* ---------------- PRICING ---------------- */}
+      <section className="sec py-20 lg:py-28">
+        <div className="wrap grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <div>
-            <SectionHead tag="Plan your budget" title={<>Know the <span className="text-paint">ballpark</span> before you call.</>} lead="Pick a service, enter the size, and see the range we typically charge in Lancaster County. It is built from the same numbers we use on real quotes." />
-            <p className="reveal mt-6 text-[17px] text-asphalt-300">
-              Want to know why we price the way we do? Read{" "}
-              <Link href="/sealcoating-cost-lancaster-pa/" className="text-paint underline underline-offset-4">what sealcoating really costs</Link> and{" "}
-              <Link href="/parking-lot-striping-cost/" className="text-paint underline underline-offset-4">what lots pay for striping</Link>.
-            </p>
+            <SectionHead eyebrow="Straight talk on price" title={<>You get the price <mark className="hl">in writing</mark> before we start.</>} lead="Pick a service, enter the size, and see the range we typically charge in Lancaster County. It is built from the same numbers we use on real quotes." />
+            <dl className="mt-10 grid gap-6 sm:grid-cols-3">
+              {[
+                ["$400", "Minimum job"],
+                ["$400 to $700", "Most driveways, sealcoated"],
+                ["$4 to $6", "Per stall to re-stripe"],
+              ].map(([big, small]) => (
+                <div key={big} className="reveal border-t-4 border-yellow pt-3">
+                  <dt className="font-display text-[26px] font-bold text-black">{big}</dt>
+                  <dd className="text-[15px] text-muted">{small}</dd>
+                </div>
+              ))}
+            </dl>
+            <Link href="/pricing/" className="more reveal mt-8">Full pricing guide <Arrow /></Link>
           </div>
           <div className="reveal"><PriceCalc /></div>
         </div>
       </section>
 
-      {/* ---------------- AREAS ---------------- */}
-      <section className="sec-light grain py-20 lg:py-28">
+      {/* ---------------- WORK ---------------- */}
+      <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead tag="Service area" title={<>Within <span className="text-[#8a5c00]">40 miles</span> of Lancaster.</>} lead="Pick your town for local details, or call and we will tell you if we cover you." />
-          <div className="reveal mt-10">
-            <TownSigns items={core.map((t) => ({ name: t.name, href: t.path }))} />
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <SectionHead eyebrow="Photo gallery" title="Our latest projects" />
+            <Link href="/gallery/" className="btn btn-outline reveal">See all {allImages().length} photos</Link>
           </div>
-          <p className="reveal mt-8 text-[18px]">
+          <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
+            {work.map((w, i) => (
+              <Link key={w} href="/gallery/" className="reveal photo aspect-[4/3] block" style={{ transitionDelay: `${(i % 4) * 60}ms` }}>
+                <Photo slug={w} small className="transition-transform duration-500 hover:scale-105" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------- AREAS ---------------- */}
+      <section className="sec py-20 lg:py-28">
+        <div className="wrap">
+          <SectionHead eyebrow="Service area" title={<>Within <mark className="hl">40 miles</mark> of Lancaster</>} lead="Pick your town for local details, or call and we will tell you if we cover you." />
+          <div className="reveal mt-10">
+            <TownChips items={core.map((t) => ({ name: t.name, href: t.path }))} />
+          </div>
+          <p className="reveal mt-8 text-[17px] text-muted">
             Larger commercial jobs in{" "}
             {towns.filter((t) => t.tier === "extended").map((t, i, a) => (
               <span key={t.slug}>
-                <Link href={t.path} className="font-semibold underline underline-offset-4">{t.name}</Link>
+                <Link href={t.path} className="font-semibold text-black underline decoration-yellow decoration-[3px] underline-offset-4">{t.name}</Link>
                 {i < a.length - 2 ? ", " : i === a.length - 2 ? " and " : ""}
               </span>
             ))}{" "}
-            are welcome too. <Link href="/service-areas/" className="font-semibold underline underline-offset-4">See every service area</Link>.
+            are welcome too. <Link href="/service-areas/" className="font-semibold text-black underline decoration-yellow decoration-[3px] underline-offset-4">See every service area</Link>.
           </p>
         </div>
       </section>
 
       {/* ---------------- BLOG ---------------- */}
-      <section className="sec-dark grain py-20 lg:py-28">
+      <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHead tag="From the blog" title={<>Straight answers <span className="text-paint">about asphalt.</span></>} />
-            <Link href="/blog/" className="btn btn-ghost reveal">All articles</Link>
+            <SectionHead eyebrow="From the blog" title="Straight answers about asphalt" />
+            <Link href="/blog/" className="btn btn-outline reveal">All articles</Link>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((p, i) => (
-              <div key={p.slug} className="reveal" style={{ transitionDelay: `${i * 80}ms` }}><PostCard p={p} /></div>
+              <div key={p.slug} className="reveal" style={{ transitionDelay: `${(i % 3) * 80}ms` }}><PostCard p={p} /></div>
             ))}
           </div>
         </div>
       </section>
 
       {/* ---------------- FAQ ---------------- */}
-      <section className="sec-deep grain py-20 lg:py-28">
+      <section className="sec py-20 lg:py-28">
         <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <SectionHead tag="Questions" title={<>Quick <span className="text-paint">answers.</span></>} />
+          <SectionHead eyebrow="Questions" title="Quick answers" />
           <FaqList faqs={homeFaqs} />
         </div>
       </section>

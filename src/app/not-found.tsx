@@ -3,21 +3,20 @@ import { site } from "@/lib/site";
 
 export default function NotFound() {
   return (
-    <section className="sec-deep grain">
+    <section className="sec">
       <div className="wrap py-24 lg:py-36">
-        <p className="tag">Error 404</p>
-        <h1 className="mt-4 text-[clamp(64px,13vw,190px)] leading-[0.85]">
-          Dead <span className="text-paint">end.</span>
+        <p className="eyebrow">Error 404</p>
+        <h1 className="mt-4 text-[clamp(40px,6vw,84px)]">
+          Dead <mark className="hl">end.</mark>
         </h1>
-        <p className="mt-6 max-w-xl text-[20px] text-asphalt-300">
+        <p className="mt-6 max-w-xl text-[19px] text-muted">
           That page is not on the map. It may have moved when we rebuilt the site. Try one of these instead.
         </p>
-        <div className="dash-line mt-10 max-w-md" aria-hidden />
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link href="/" className="btn btn-paint">Home</Link>
-          <Link href="/services/" className="btn btn-ghost">Services</Link>
-          <Link href="/contact/" className="btn btn-ghost">Contact</Link>
-          <a href={`tel:${site.phoneTel}`} className="btn btn-ghost">{site.phone}</a>
+          <Link href="/" className="btn btn-yellow">Home</Link>
+          <Link href="/services/" className="btn btn-outline">Services</Link>
+          <Link href="/contact/" className="btn btn-outline">Contact</Link>
+          <a href={`tel:${site.phoneTel}`} className="btn btn-outline">{site.phone}</a>
         </div>
       </div>
     </section>

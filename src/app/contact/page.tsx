@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import LeadForm from "@/components/LeadForm";
-import { Breadcrumbs, FaqList, SectionHead, TownSigns } from "@/components/ui";
+import { Breadcrumbs, FaqList, SectionHead, TownChips } from "@/components/ui";
 import JsonLd from "@/components/JsonLd";
 import { towns } from "@/content/towns";
 import { abs, site } from "@/lib/site";
@@ -27,56 +27,55 @@ export default function Contact() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Contact", href: "/contact/" }]} />
-      <section className="sec-deep grain">
-        <div className="wrap grid gap-12 py-12 lg:grid-cols-[0.9fr_1.1fr] lg:py-20">
+      <section className="sec">
+        <div className="wrap grid gap-12 py-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-16">
           <div>
-            <p className="tag rise">Contact us today</p>
-            <h1 className="rise mt-4 text-[clamp(50px,8vw,110px)]" style={{ animationDelay: "80ms" }}>Free estimates. Fast reply.</h1>
-            <p className="rise mt-6 max-w-lg text-[20px] text-asphalt-300" style={{ animationDelay: "160ms" }}>
+            <p className="eyebrow rise">Contact us today</p>
+            <h1 className="rise mt-4 text-[clamp(34px,4.4vw,58px)]" style={{ animationDelay: "80ms" }}>Free estimates. <mark className="hl">Fast reply.</mark></h1>
+            <p className="rise mt-6 max-w-lg text-[19px] text-muted" style={{ animationDelay: "160ms" }}>
               Sealcoating, crack filling, striping and pothole repair. Tell us what you see. We reply within one business day.
             </p>
             <ul className="rise mt-10 grid gap-6" style={{ animationDelay: "240ms" }}>
               <li>
-                <span className="stencil text-[14px] tracking-[0.16em] text-paint">Call</span>
-                <a href={`tel:${site.phoneTel}`} className="block font-display text-[clamp(44px,6vw,68px)] font-extrabold leading-none tracking-[0.02em] hover:text-paint">{site.phone}</a>
+                <span className="eyebrow !text-[13px]">Call</span>
+                <a href={`tel:${site.phoneTel}`} className="mt-1 block font-display text-[clamp(30px,3.6vw,44px)] font-bold text-black hover:underline">{site.phone}</a>
               </li>
               <li>
-                <span className="stencil text-[14px] tracking-[0.16em] text-paint">Email</span>
-                <a href={`mailto:${site.email}`} className="block text-[22px] hover:text-paint">{site.email}</a>
+                <span className="eyebrow !text-[13px]">Email</span>
+                <a href={`mailto:${site.email}`} className="mt-1 block text-[20px] text-black hover:underline">{site.email}</a>
               </li>
               <li>
-                <span className="stencil text-[14px] tracking-[0.16em] text-paint">Service area</span>
-                <span className="block text-[20px]">{site.region}, and about 40 miles around</span>
+                <span className="eyebrow !text-[13px]">Service area</span>
+                <span className="mt-1 block text-[18px]">{site.region}, and about 40 miles around</span>
               </li>
               <li>
-                <span className="stencil text-[14px] tracking-[0.16em] text-paint">Hours</span>
-                <dl className="mt-1 grid max-w-xs grid-cols-[auto_1fr] gap-x-6 text-[18px]">
+                <span className="eyebrow !text-[13px]">Hours</span>
+                <dl className="mt-1 grid max-w-xs grid-cols-[auto_1fr] gap-x-6 text-[17px]">
                   {site.hours.map((h) => (
-                    <div key={h.days} className="contents"><dt className="text-asphalt-300">{h.days}</dt><dd>{h.open} to {h.close}</dd></div>
+                    <div key={h.days} className="contents"><dt className="text-muted">{h.days}</dt><dd>{h.open} to {h.close}</dd></div>
                   ))}
                 </dl>
               </li>
             </ul>
           </div>
-          <div className="rise chamfer bg-asphalt-800 p-6 sm:p-9" style={{ animationDelay: "200ms" }}>
-            <h2 className="text-[40px]">Send us a message</h2>
-            <p className="mb-6 mt-2 text-[17px] text-asphalt-300">Have a question or need a quote? Fill out the form and we will get back to you.</p>
+          <div className="rise card card-flat p-6 sm:p-9" style={{ animationDelay: "200ms" }}>
+            <h2 className="text-[28px]">Send us a message</h2>
+            <p className="mb-6 mt-2 text-[16px] text-muted">Have a question or need a quote? Fill out the form and we will get back to you.</p>
             <LeadForm />
           </div>
         </div>
-        <div className="double-line" aria-hidden />
       </section>
 
-      <section className="sec-light grain py-16 lg:py-24">
+      <section className="sec-grey py-20 lg:py-28">
         <div className="wrap">
-          <SectionHead tag="Areas we serve" title={<>Lancaster County <span className="text-[#8a5c00]">and 40 miles around.</span></>} lead="We provide asphalt maintenance, sealcoating, line striping and pothole repair across Lancaster County and the communities around it." />
-          <div className="reveal mt-10"><TownSigns items={core.map((t) => ({ name: t.name, href: t.path }))} /></div>
+          <SectionHead eyebrow="Areas we serve" title={<>Lancaster County and <mark className="hl">40 miles around</mark></>} lead="We provide asphalt maintenance, sealcoating, line striping and pothole repair across Lancaster County and the communities around it." />
+          <div className="reveal mt-10"><TownChips items={core.map((t) => ({ name: t.name, href: t.path }))} /></div>
         </div>
       </section>
 
-      <section className="sec-deep grain py-16 lg:py-24">
+      <section className="sec py-20 lg:py-28">
         <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <SectionHead tag="Before you call" title={<>More useful <span className="text-paint">information.</span></>} />
+          <SectionHead eyebrow="Before you call" title="More useful information" />
           <FaqList faqs={faqs} />
         </div>
       </section>

@@ -10,6 +10,7 @@ export type Service = {
   kicker: string;
   lead: string;
   hero: string;
+  icon: string;
   gallery: string[];
   intro: string[];
   includes: { t: string; d: string }[];
@@ -35,6 +36,7 @@ export const services: Service[] = [
     kicker: "Pavement markings",
     lead: "Straight lines, correct dimensions, and paint that stays visible. We stripe new layouts and re-stripe worn ones for businesses, churches, schools, apartment communities and industrial sites.",
     hero: "retail-lot-fresh-yellow-stripes",
+    icon: "striper",
     gallery: ["shopping-center-yellow-hatching", "retail-lot-angled-yellow-stripes", "white-directional-arrows-lane-line", "lot-arrows-white-center-line", "reserved-stencil-night", "order-here-stencil-drive"],
     intro: [
       "Pavement markings do a quiet job. They tell drivers where to go, tell pedestrians where it is safe to cross, keep fire lanes open, and make a lot hold the number of cars it was designed to hold. When the paint fades, people start parking wherever they like, ADA stalls lose their legal markings, and the property starts to look neglected even when everything else is in good shape.",
@@ -100,6 +102,7 @@ export const services: Service[] = [
     kicker: "Commercial lots",
     lead: "Fresh stall lines, clear aisles and ADA markings that pass inspection. We stripe parking lots for property managers, business owners, congregations and HOAs across Lancaster County.",
     hero: "shopping-center-yellow-hatching",
+    icon: "lot",
     gallery: ["retail-lot-yellow-stalls-ada-curb", "retail-lot-restriped-blue-ada", "church-lot-ada-hatched-stalls", "empty-lot-night-white-stalls", "small-business-lot-numbered-stalls", "rear-lot-restriped-numbered"],
     intro: [
       "A parking lot is the first thing a customer touches. If the stalls are faded and the aisles are unclear, it sets the tone before they ever reach your door. If the lines are sharp, the lot looks cared for and the property looks managed.",
@@ -166,6 +169,7 @@ export const services: Service[] = [
     kicker: "Accessible parking",
     lead: "Correct counts, correct widths, and markings that do not wear away in two winters. We stripe accessible stalls, van spaces and access aisles for commercial properties in Lancaster County.",
     hero: "ada-stall-white-outline-brick-building",
+    icon: "ada",
     gallery: ["ada-blue-symbol-night-striping", "night-lot-blue-ada-hatching", "church-lot-ada-spaces-wide", "ada-stall-white-hatching-wood-deck", "shopping-lot-ada-hatching-night", "loading-zone-stencil-striping"],
     intro: [
       "Accessible parking is one of the most common places a business gets caught out. The stall might be the right size but missing an access aisle, or the aisle might be too narrow for a van lift, or there may not be enough stalls for the size of the lot. These are measurement problems, and they are easy to fix once someone measures.",
@@ -230,6 +234,7 @@ export const services: Service[] = [
     kicker: "Fire lanes and curbs",
     lead: "A fire lane only works if drivers can see it and respect it. We paint curbs and stencil lettering so your fire lanes, loading zones and no parking areas are unmistakable.",
     hero: "yellow-orange-curb-lines-lot",
+    icon: "fire-lane",
     gallery: ["rear-lot-stencils-yellow-curb", "rear-lot-fresh-stall-lines", "no-parking-stencil-white-box", "loading-zone-stencil-striping", "ada-access-aisle-yellow-striping", "retail-lot-yellow-stalls-ada-curb"],
     intro: [
       "Fire lanes are decided by your municipality and fire official, not by the contractor. The township or borough where your property sits decides where the lane runs, how it is marked, and what the wording must be. Some want red curbs. Some want yellow. Some want stenciled lettering at a set spacing along the curb or pavement. That is why we start with your fire official's requirements before we pick a color.",
@@ -293,6 +298,7 @@ export const services: Service[] = [
     kicker: "Industrial floors",
     lead: "Clear aisles and marked work zones make a warehouse safer and faster to work in. We mark concrete and coated floors with crisp lines that hold up to forklifts and foot traffic.",
     hero: "warehouse-floor-line-marking-yellow-red",
+    icon: "striper-solid",
     gallery: ["warehouse-floor-lane-layout", "warehouse-floor-line-marking-dock-doors", "warehouse-red-yellow-lines-close", "warehouse-yellow-lines-lit-bay", "loading-dock-lot-asphalt"],
     intro: [
       "A marked floor is a safety tool and a productivity tool. Lines show where forklifts run, where people walk, where pallets are staged, and where nothing is allowed to sit. OSHA expects permanent aisles and passageways to be appropriately marked. Beyond compliance, a well marked floor means fewer near misses and faster picks.",
@@ -356,6 +362,7 @@ export const services: Service[] = [
     kicker: "Protect the pavement",
     lead: "Sealcoating is sunscreen for asphalt. It slows oxidation, keeps water out, and brings back the black surface. We do it in two coats, with proper prep, and we tell you when it is not the right move.",
     hero: "driveway-sealcoat-orange-cones",
+    icon: "sealing",
     gallery: ["driveway-sealcoat-wide-apron", "driveway-sealcoat-caution-tape", "driveway-sealcoat-glossy-wet", "driveway-sealcoat-curved-apron", "driveway-sealcoat-stamped-walkway", "driveway-sealcoat-garden-edge"],
     intro: [
       "Asphalt is made of stone held together by a petroleum binder. Over time the sun dries out that binder, rain and snow work their way into the surface, and salt and oil attack what is left. Sealcoating puts a thin protective layer on top, so the pavement does not have to take all of that directly.",
@@ -421,6 +428,7 @@ export const services: Service[] = [
     kicker: "For homeowners",
     lead: "A sealed driveway looks sharp and lasts years longer. We clean it, fill the cracks, cut the edges by hand and apply two coats. Most driveways cost $400 to $700 and the work takes a day.",
     hero: "driveway-sealcoat-fall-tree",
+    icon: "coating",
     gallery: ["driveway-sealcoat-autumn-garage", "driveway-sealcoat-small-home", "driveway-sealcoat-long-ranch", "driveway-sealcoat-sloped-cape", "driveway-sealcoat-grass-edge", "driveway-sealcoat-curved-apron", "driveway-sealcoat-orange-cones", "driveway-sealcoat-long-drive"],
     intro: [
       "Your driveway takes more abuse than most things around your house. It sits in full sun, holds snow and salt all winter, and carries cars that drip oil and fluids. By year three or four, a driveway that started out black is usually gray, dry and a little rough.",
@@ -486,6 +494,7 @@ export const services: Service[] = [
     kicker: "Seal the cracks",
     lead: "Water gets into small cracks, freezes, and turns them into potholes. We heat rubberized sealant to about 400 degrees and fill cracks the right way, so they stay filled through a Pennsylvania winter.",
     hero: "hot-pour-crack-sealing-melter",
+    icon: "crack",
     gallery: ["hot-pour-crack-fill-lot-cracks", "hot-pour-crack-sealing-crew", "crack-filled-commercial-drive", "retail-lot-angled-yellow-stripes", "driveway-sealcoat-long-evergreens"],
     intro: [
       "A crack in asphalt is not the problem. The water that gets in through the crack is. Once it is under the surface, it softens the base. When temperatures drop, it freezes and expands, pushing the pavement apart. When it thaws, it leaves a void. Repeat that a few dozen times in a Lancaster County winter and you have a pothole.",
@@ -549,6 +558,7 @@ export const services: Service[] = [
     kicker: "Fix it right",
     lead: "A pothole you fix with a shovelful of loose patch comes back by spring. We cut the edges square, repair the base, and place hot mix in compacted layers, so the repair becomes part of the pavement.",
     hero: "private-lane-fresh-asphalt",
+    icon: "repair",
     gallery: ["driveway-resurfaced-edge-gravel", "driveway-fresh-asphalt-garage", "driveway-fresh-asphalt-leaves", "private-drive-fresh-asphalt-house", "loading-dock-lot-asphalt"],
     intro: [
       "Potholes are what happens when water, freezing temperatures and traffic find a weak spot. The pavement cracks, water gets in, the base softens, and the surface collapses. Filling just the hole does not fix any of that.",
@@ -612,6 +622,7 @@ export const services: Service[] = [
     kicker: "One crew, one visit",
     lead: "A lot lasts longest when the work is done in order. Fill the cracks, patch the holes, seal the surface, then paint the lines. One crew can handle all of it.",
     hero: "retail-lot-restriped-blue-ada",
+    icon: "lot",
     gallery: ["retail-lot-fresh-yellow-stripes", "hot-pour-crack-fill-lot-cracks", "church-lot-white-stalls-drain", "rear-lot-stencils-yellow-curb", "dusk-lot-stall-lines-fresh-paint"],
     intro: [
       "Most parking lot problems start small. A hairline crack, a dull patch of gray, a few faded stalls. Left alone, those become potholes, drainage problems and a lot that looks tired. The good news is that a lot is cheap to maintain compared with replacing it.",

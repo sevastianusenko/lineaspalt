@@ -4,8 +4,9 @@ See README.md for structure and scripts.
 
 ## Design (do not drift)
 
-Asphalt black + road-paint yellow (#ffb400, from the tiger logo), concrete grey for light sections. Big Shoulders (display) + Big Shoulders Stencil (labels, numerals) + Public Sans (body).
-Signature elements, all visible on every page: double yellow line dividers, dashed center line, angled parking-stall photo frames, stenciled numerals, green road-sign town links, yellow full-bleed bands. Photos are the company's own, never stock.
+The client's own look, carried over from the old WordPress site: white background, light grey (#f4f4f2) alternating sections, one black band (core services) and black CTA bands, yellow #ffcd05 as the only accent (active menu item block, buttons, `mark.hl` highlight behind a key word, yellow circle in the hero). Sen bold for headings, Public Sans for body. Photos with 16px rounded corners, white cards with 1px border. Buttons: yellow fill, black fill, black outline.
+Icons are the client's: `public/icons/*.png` built by `scripts/icons.mjs` from source-media (striper, sealing, coating, repair = the 4-icon composite; lot, fire-lane, ada, crack, striper-solid, shovel-solid = the yellow silhouettes). Each service has an `icon` field in services.ts. Do not swap in generic icon fonts.
+Rejected on 2026-10-02: a dark "asphalt" theme with Big Shoulders stencil type. User said it was too dark and cramped.
 
 ## Facts that need the client
 

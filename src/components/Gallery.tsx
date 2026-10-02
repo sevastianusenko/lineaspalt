@@ -53,20 +53,20 @@ export default function Gallery({ items, cats, initial = 24 }: { items: Item[]; 
               setCat(c.key);
               setLimit(initial);
             }}
-            className={`shrink-0 px-4 py-2.5 font-display text-[18px] font-bold uppercase tracking-[0.05em] transition-colors ${cat === c.key ? "bg-paint text-black" : "bg-asphalt-700 text-line hover:bg-asphalt-600"}`}
+            className={`shrink-0 px-4 py-2.5 font-display text-[15px] font-bold transition-colors ${cat === c.key ? "bg-yellow text-black" : "bg-white text-ink hover:bg-grey-2"}`}
           >
             {c.label}
           </button>
         ))}
       </div>
 
-      <ul className="mt-8 columns-2 gap-3 sm:gap-4 md:columns-3 lg:columns-4">
+      <ul className="mt-8 columns-2 gap-4 md:columns-3 lg:columns-4">
         {shown.map((i, idx) => (
-          <li key={i.slug} className="mb-3 break-inside-avoid sm:mb-4">
-            <button type="button" onClick={() => setOpen(idx)} className="group relative block w-full overflow-hidden bg-asphalt-800" aria-label={`Open photo: ${i.alt}`}>
+          <li key={i.slug} className="mb-4 break-inside-avoid">
+            <button type="button" onClick={() => setOpen(idx)} className="photo group relative block w-full" aria-label={`Open photo: ${i.alt}`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={`/img/${i.slug}-sm.webp`} alt={i.alt} width={i.sw} height={i.sh} loading="lazy" decoding="async" className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.04]" />
-              <span className="absolute inset-x-0 bottom-0 h-1.5 origin-left scale-x-0 bg-paint transition-transform duration-300 group-hover:scale-x-100" />
+              <span className="absolute inset-x-0 bottom-0 h-1.5 origin-left scale-x-0 bg-yellow transition-transform duration-300 group-hover:scale-x-100" />
             </button>
           </li>
         ))}
@@ -74,7 +74,7 @@ export default function Gallery({ items, cats, initial = 24 }: { items: Item[]; 
 
       {limit < list.length && (
         <div className="mt-8 text-center">
-          <button type="button" className="btn btn-ghost" onClick={() => setLimit((l) => l + 24)}>
+          <button type="button" className="btn btn-outline" onClick={() => setLimit((l) => l + 24)}>
             Show more ({list.length - limit} left)
           </button>
         </div>
@@ -92,15 +92,15 @@ export default function Gallery({ items, cats, initial = 24 }: { items: Item[]; 
         {cur && (
           <div className="relative flex h-full w-full flex-col items-center justify-center p-4 sm:p-10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`/img/${cur.slug}.webp`} alt={cur.alt} className="max-h-[82vh] w-auto max-w-full object-contain" />
-            <p className="mt-4 max-w-2xl text-center text-[16px] text-line">{cur.alt}</p>
-            <button type="button" onClick={close} className="absolute right-3 top-3 grid h-12 w-12 place-items-center bg-paint text-black" aria-label="Close photo">
+            <img src={`/img/${cur.slug}.webp`} alt={cur.alt} className="max-h-[82vh] w-auto max-w-full rounded-xl object-contain" />
+            <p className="mt-4 max-w-2xl text-center text-[16px] text-white">{cur.alt}</p>
+            <button type="button" onClick={close} className="absolute right-3 top-3 grid h-12 w-12 place-items-center bg-yellow text-black" aria-label="Close photo">
               <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3" fill="none" aria-hidden><path d="M5 5l14 14M19 5L5 19" /></svg>
             </button>
-            <button type="button" onClick={() => step(-1)} className="absolute left-2 top-1/2 grid h-14 w-12 -translate-y-1/2 place-items-center bg-asphalt-800/90 text-paint sm:left-6" aria-label="Previous photo">
+            <button type="button" onClick={() => step(-1)} className="absolute left-2 top-1/2 grid h-14 w-12 -translate-y-1/2 place-items-center bg-white/15 text-white hover:bg-yellow hover:text-black sm:left-6" aria-label="Previous photo">
               <svg width="26" height="26" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3" fill="none" aria-hidden><path d="M15 4l-8 8 8 8" /></svg>
             </button>
-            <button type="button" onClick={() => step(1)} className="absolute right-2 top-1/2 grid h-14 w-12 -translate-y-1/2 place-items-center bg-asphalt-800/90 text-paint sm:right-6" aria-label="Next photo">
+            <button type="button" onClick={() => step(1)} className="absolute right-2 top-1/2 grid h-14 w-12 -translate-y-1/2 place-items-center bg-white/15 text-white hover:bg-yellow hover:text-black sm:right-6" aria-label="Next photo">
               <svg width="26" height="26" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3" fill="none" aria-hidden><path d="M9 4l8 8-8 8" /></svg>
             </button>
           </div>

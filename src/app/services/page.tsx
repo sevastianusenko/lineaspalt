@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Breadcrumbs, CtaBand, PageHero, Photo, SectionHead } from "@/components/ui";
+import { Breadcrumbs, CtaBand, Icon, PageHero, SectionHead } from "@/components/ui";
 import { services } from "@/content/services";
 
 export const metadata: Metadata = {
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 };
 
 const groups = [
-  { key: "striping", title: "Pavement markings", tag: "Paint the lines", text: "Layouts, re-striping, accessible stalls, fire lanes and floors." },
-  { key: "protection", title: "Protect the surface", tag: "Seal it", text: "Sealcoating, crack filling and planned maintenance that make pavement last." },
-  { key: "repair", title: "Repair the damage", tag: "Fix it", text: "Potholes and failed spots, repaired from the base up." },
+  { key: "striping", title: "Pavement markings", eyebrow: "Paint the lines", text: "Layouts, re-striping, accessible stalls, fire lanes and floors." },
+  { key: "protection", title: "Protect the surface", eyebrow: "Seal it", text: "Sealcoating, crack filling and planned maintenance that make pavement last." },
+  { key: "repair", title: "Repair the damage", eyebrow: "Fix it", text: "Potholes and failed spots, repaired from the base up." },
 ] as const;
 
 export default function Services() {
@@ -21,42 +21,33 @@ export default function Services() {
     <>
       <Breadcrumbs items={[{ name: "Services", href: "/services/" }]} />
       <PageHero
-        kicker="Everything for your pavement"
-        title="Asphalt maintenance and line striping services"
+        eyebrow="Featured services"
+        title={<>We provide the <mark className="hl">best services</mark></>}
         lead="One local crew for the whole job: fill the cracks, fix the holes, seal the surface, paint the lines. Residential and commercial, anywhere within about 40 miles of Lancaster."
         image="retail-lot-restriped-blue-ada"
       >
         <div className="flex flex-wrap gap-4">
-          <Link href="/contact/" className="btn btn-paint">Free quote</Link>
-          <Link href="/pricing/" className="btn btn-ghost">See pricing</Link>
+          <Link href="/contact/" className="btn btn-yellow">Free quote</Link>
+          <Link href="/pricing/" className="btn btn-outline">See pricing</Link>
         </div>
       </PageHero>
 
       {groups.map((g, gi) => {
         const list = services.filter((s) => s.group === g.key);
-        const light = gi === 1;
         return (
-          <section key={g.key} className={`${light ? "sec-light" : gi === 0 ? "sec-dark" : "sec-deep"} grain py-16 lg:py-24`}>
+          <section key={g.key} className={`${gi % 2 === 0 ? "sec-grey" : "sec"} py-20 lg:py-28`}>
             <div className="wrap">
-              <SectionHead tag={g.tag} title={g.title} lead={g.text} />
+              <SectionHead eyebrow={g.eyebrow} title={g.title} lead={g.text} />
               <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {list.map((s, i) => (
-                  <Link
-                    key={s.slug}
-                    href={`/${s.slug}/`}
-                    className={`reveal group flex flex-col ${light ? "bg-white text-ink" : "bg-asphalt-800 text-line"} transition-transform hover:-translate-y-1`}
-                    style={{ transitionDelay: `${(i % 3) * 70}ms` }}
-                  >
-                    <span className="block aspect-[16/11] overflow-hidden bg-asphalt-700">
-                      <Photo slug={s.hero} small className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    </span>
-                    <span className="flex flex-1 flex-col p-6">
-                      <span className="font-display text-[36px] font-extrabold uppercase leading-none group-hover:text-paint">{s.name}</span>
-                      <span className={`mt-3 text-[17px] ${light ? "text-[#2b2e31]" : "text-asphalt-300"}`}>{s.short}</span>
-                      <span className={`mt-auto inline-flex items-center gap-3 pt-5 font-display text-[18px] font-bold uppercase tracking-[0.08em] ${light ? "text-[#8a5c00]" : "text-paint"}`}>
-                        Details and pricing
-                        <svg width="26" height="12" viewBox="0 0 30 14" fill="currentColor" className="transition-transform group-hover:translate-x-2" aria-hidden><path d="M0 5h22V0l8 7-8 7V9H0z" /></svg>
-                      </span>
+                  <Link key={s.slug} href={`/${s.slug}/`} className="card reveal flex flex-col items-center p-10 text-center" style={{ transitionDelay: `${(i % 3) * 70}ms` }}>
+                    <span className="icon-tile"><Icon name={s.icon} size={88} /></span>
+                    <span className="mt-4 block font-display text-[24px] font-bold text-black">{s.name}</span>
+                    <span className="mt-3 block text-[16px] text-muted">{s.short}</span>
+                    <span className="mt-5 block text-[14px] text-faint">From {s.price.rows.find(([k]) => /minimum/i.test(k))?.[1] ?? "$400"}</span>
+                    <span className="more mt-5">
+                      Learn more
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                     </span>
                   </Link>
                 ))}
@@ -66,24 +57,25 @@ export default function Services() {
         );
       })}
 
-      <section className="sec-yellow py-16 lg:py-24">
+      <section className="sec-black py-20 lg:py-28">
         <div className="wrap grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <div>
-            <p className="tag reveal">Order matters</p>
-            <h2 className="reveal mt-4 text-[clamp(40px,6vw,80px)]">Do it in this order.</h2>
+            <p className="eyebrow reveal">Order matters</p>
+            <h2 className="reveal mt-4 text-[clamp(30px,3.6vw,44px)]">Do it in this order</h2>
+            <p className="reveal mt-5 max-w-md text-[18px] text-white/75">Each step protects the next one. Doing them out of order wastes money, which is why we plan a lot as a package.</p>
           </div>
-          <ol className="grid gap-5">
+          <ol className="grid gap-4">
             {[
               ["Fill the cracks", "Water in a crack is what makes potholes. Hot rubber goes in first."],
               ["Repair the holes", "Cut, rebuild the base, and compact hot mix. No loose patch."],
               ["Seal the surface", "Two coats protect the pavement around the repairs."],
               ["Paint the lines", "Striping goes on cured sealer, so it looks sharp and lasts."],
             ].map(([t, d], i) => (
-              <li key={t} className="reveal grid grid-cols-[56px_1fr] gap-4 border-t-[4px] border-black pt-4">
-                <span className="stencil text-[44px] leading-none">{i + 1}</span>
+              <li key={t} className="reveal grid grid-cols-[48px_1fr] gap-5 border-t border-white/15 pt-5">
+                <span className="grid h-12 w-12 place-items-center bg-yellow font-display text-[20px] font-bold text-black">{i + 1}</span>
                 <span>
-                  <span className="block font-display text-[32px] font-extrabold uppercase leading-none">{t}</span>
-                  <span className="mt-1 block text-[17px] font-medium">{d}</span>
+                  <span className="block font-display text-[22px] font-bold text-white">{t}</span>
+                  <span className="mt-1 block text-[16px] text-white/75">{d}</span>
                 </span>
               </li>
             ))}

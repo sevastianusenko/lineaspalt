@@ -27,14 +27,14 @@ export default function GalleryPage() {
     <>
       <Breadcrumbs items={[{ name: "Our work", href: "/gallery/" }]} />
       <PageHero
-        kicker="Gallery"
-        title="Real jobs. Real lots. Real lines."
+        eyebrow="Gallery"
+        title={<>Real jobs. Real lots. <mark className="hl">Real lines.</mark></>}
         lead={`${items.length} photos from our own jobs across Lancaster County: striping, ADA stalls, sealcoating, crack filling and floors.`}
         image="warehouse-floor-line-marking-yellow-red"
       >
-        <Link href="/contact/" className="btn btn-paint">Start your project</Link>
+        <Link href="/contact/" className="btn btn-yellow">Start your project</Link>
       </PageHero>
-      <section className="sec-dark grain py-14 lg:py-20">
+      <section className="sec-grey py-16 lg:py-20">
         <div className="wrap">
           <Gallery items={items} cats={categories} />
         </div>

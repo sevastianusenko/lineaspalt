@@ -12,10 +12,10 @@ export default function Privacy() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Privacy policy", href: "/privacy-policy/" }]} />
-      <section className="sec-dark grain py-14 lg:py-20">
+      <section className="sec py-14 lg:py-20">
         <div className="wrap-narrow">
-          <h1 className="text-[clamp(44px,7vw,84px)]">Privacy policy</h1>
-          <p className="mt-3 text-asphalt-300">Last updated: October 1, 2026</p>
+          <h1 className="text-[clamp(32px,4.4vw,54px)]">Privacy policy</h1>
+          <p className="mt-3 text-muted">Last updated: October 1, 2026</p>
           <div className="prose mt-8">
             <p>
               This policy explains what {site.legalName} does with information you send us through this website. We are a small local contractor, and we keep it simple.
