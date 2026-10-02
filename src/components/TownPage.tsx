@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Breadcrumbs, FaqList, Icon, LeadSection, PageHero, Photo, ReviewCard, SectionHead, Stars, TownChips } from "./ui";
 import JsonLd from "./JsonLd";
 import { towns, townFaqs, type Town } from "@/content/towns";
-import { reviews } from "@/content/reviews";
+import { featured } from "@/content/reviews";
 import { abs, site } from "@/lib/site";
 import { businessId } from "@/lib/schema";
 
@@ -135,7 +135,7 @@ export default function TownPage({ t }: { t: Town }) {
         <div className="wrap">
           <SectionHead eyebrow={`${site.name} reviews`} title="What customers say" />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {reviews.slice(1, 4).map((r) => (
+            {featured.slice(0, 3).map((r) => (
               <div key={r.name} className="reveal"><ReviewCard r={r} /></div>
             ))}
           </div>

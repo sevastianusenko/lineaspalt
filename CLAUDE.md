@@ -17,7 +17,8 @@ Rejected on 2026-10-02: a dark "asphalt" theme with Big Shoulders stencil type. 
 - PA Home Improvement Contractor registration number: not on the site. HICPA expects it in advertising for home improvement work. Add to footer + schema when known.
 - "Fully insured" comes from the old site. Insurance details not verified.
 - Socials: facebook.com/linesasphalt and instagram.com/linesasphalt from the old schema, not verified.
-- 12 Google reviews / 5.0 from the old Trustindex widget. 10 review texts are shown.
+- Reviews: Google shows 12 ratings, 5.0. The 10 with text (dated Nov 24 to Dec 5, 2025) are in `src/content/reviews.ts`, copied verbatim from the Trustindex table on the old WordPress host (`wp_trustindex_google_reviews`, synced March 2026); the other 2 are rating-only. Place ID ChIJt-yN4-vMkUMRYeIUvTBjuYs. Maps and Search hide the review list from anonymous scrapers, so new reviews have to be copied by hand from the GBP manager. No AggregateRating schema on purpose: Google does not want third-party (Google) reviews marked up as the site's own.
+- Old WordPress host (SSH alias `hostinger-linesasphalt`, 187.124.72.230): on 2026-10-02 the server's host key had changed (known_hosts line 4). Key auth still worked. Ask the user before updating known_hosts.
 
 ## Deploy checklist
 

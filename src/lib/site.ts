@@ -22,12 +22,14 @@ export const site = {
   hours: [
     { days: "Mon to Fri", open: "8:00 AM", close: "5:00 PM" },
   ],
-  // Google Business Profile (cid from the profile link the client shared).
+  // Google Business Profile. cid from the profile link the client shared; Place ID from the
+  // review feed the old site stored. Both point at the same listing.
   gbp: {
     cid: "10068187502945296993",
+    placeId: "ChIJt-yN4-vMkUMRYeIUvTBjuYs",
     url: "https://www.google.com/maps?cid=10068187502945296993",
-    reviewUrl:
-      "https://www.google.com/search?q=Lancaster+Lines+%26+Asphalt+Strasburg+PA&ludocid=10068187502945296993#lrd=0x4391ccebe38decb7:0x8bb96330bd14e261,3",
+    reviewsUrl: "https://search.google.com/local/reviews?placeid=ChIJt-yN4-vMkUMRYeIUvTBjuYs",
+    reviewUrl: "https://search.google.com/local/writereview?placeid=ChIJt-yN4-vMkUMRYeIUvTBjuYs",
   },
   social: {
     facebook: "https://www.facebook.com/linesasphalt",

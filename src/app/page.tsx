@@ -4,7 +4,7 @@ import { Photo, SectionHead, ReviewCard, Stars, PostCard, LeadSection, TownChips
 import PriceCalc from "@/components/PriceCalc";
 import { services } from "@/content/services";
 import { towns } from "@/content/towns";
-import { reviews } from "@/content/reviews";
+import { featured } from "@/content/reviews";
 import { getPosts } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { allImages } from "@/lib/images";
@@ -197,11 +197,11 @@ export default function Home() {
               <Stars className="mt-2 justify-center" size={28} />
               <p className="mt-3 text-[15px] text-muted">Based on <strong className="text-black">{site.rating.count} reviews</strong></p>
               <p className="mt-1 font-display text-[22px] font-bold text-black">Google</p>
-              <a href={site.gbp.url} target="_blank" rel="noopener noreferrer" className="more mt-4 !text-[14px]">See {site.short} on Google</a>
+              <a href={site.gbp.reviewsUrl} target="_blank" rel="noopener noreferrer" className="more mt-4 !text-[14px]">Read all reviews on Google</a>
               <a href={site.gbp.reviewUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm mt-4 w-full">Leave a review</a>
             </div>
             <div className="grid gap-5 md:grid-cols-2">
-              {reviews.slice(0, 6).map((r, i) => (
+              {featured.map((r, i) => (
                 <div key={r.name} className="reveal" style={{ transitionDelay: `${(i % 2) * 90}ms` }}>
                   <ReviewCard r={r} />
                 </div>

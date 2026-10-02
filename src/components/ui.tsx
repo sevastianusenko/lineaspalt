@@ -5,7 +5,7 @@ import LeadForm from "./LeadForm";
 import { img, src as imgSrc, srcSm } from "@/lib/images";
 import { abs, site } from "@/lib/site";
 import type { Faq } from "@/content/services";
-import type { Review } from "@/content/reviews";
+import { reviewMonth, type Review } from "@/content/reviews";
 import type { Post } from "@/lib/posts";
 import { formatDate, readMinutes } from "@/lib/posts";
 
@@ -167,7 +167,7 @@ export function TownChips({ items }: { items: { name: string; href?: string }[] 
 /* ---------- Google Business Profile badge ---------- */
 export function GoogleBadge({ className = "" }: { className?: string }) {
   return (
-    <a href={site.gbp.url} target="_blank" rel="noopener noreferrer" className={`card inline-flex items-center gap-3 px-4 py-3 ${className}`}>
+    <a href={site.gbp.reviewsUrl} target="_blank" rel="noopener noreferrer" className={`card inline-flex items-center gap-3 px-4 py-3 ${className}`}>
       <Stars size={16} />
       <span className="text-[14px]">
         <strong className="font-display text-black">{site.rating.value} on Google</strong>
@@ -196,12 +196,14 @@ export function ReviewCard({ r }: { r: Review }) {
         <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-black font-display text-[20px] font-bold text-yellow" aria-hidden>{initial}</span>
         <span>
           <span className="block font-display text-[17px] font-bold text-black">{r.name}</span>
-          <span className="block text-[14px] text-muted">{r.job}</span>
+          <span className="block text-[14px] text-muted">{r.job} &middot; {reviewMonth(r.date)}</span>
         </span>
       </figcaption>
       <Stars className="mt-4" size={18} />
       <blockquote className="mt-3 text-[16px] leading-relaxed text-[#333]">{r.text}</blockquote>
-      <p className="mt-auto pt-5 text-[13px] text-faint">Google review of {site.name}</p>
+      <p className="mt-auto pt-5 text-[13px] text-faint">
+        <a href={site.gbp.reviewsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-black hover:underline">Google review of {site.name}</a>
+      </p>
     </figure>
   );
 }

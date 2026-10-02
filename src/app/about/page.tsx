@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs, LeadSection, PageHero, Photo, ReviewCard, SectionHead, Stars } from "@/components/ui";
-import { reviews } from "@/content/reviews";
+import { featured } from "@/content/reviews";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -102,7 +102,7 @@ export default function About() {
             <div className="reveal flex flex-wrap items-center gap-4"><Stars size={28} /><a href={site.gbp.reviewUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">Leave a Google review</a></div>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {reviews.slice(0, 3).map((r) => (
+            {featured.slice(0, 3).map((r) => (
               <div key={r.name} className="reveal"><ReviewCard r={r} /></div>
             ))}
           </div>
