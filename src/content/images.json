@@ -1,0 +1,587 @@
+{
+ "retail-lot-yellow-stalls-ada-curb": {
+  "slug": "retail-lot-yellow-stalls-ada-curb",
+  "cat": "striping",
+  "alt": "Yellow-striped parking stalls and a blue ADA curb outside a retail plaza",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "retail-lot-fresh-yellow-stripes": {
+  "slug": "retail-lot-fresh-yellow-stripes",
+  "cat": "striping",
+  "alt": "Freshly painted yellow stall lines across a large retail parking lot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "retail-lot-angled-yellow-stripes": {
+  "slug": "retail-lot-angled-yellow-stripes",
+  "cat": "striping",
+  "alt": "Angled yellow parking stripes laid out on a crack-filled asphalt lot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "shopping-center-yellow-hatching": {
+  "slug": "shopping-center-yellow-hatching",
+  "cat": "striping",
+  "alt": "Yellow hatched striping and parking lines in a shopping center lot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "retail-lot-restriped-blue-ada": {
+  "slug": "retail-lot-restriped-blue-ada",
+  "cat": "striping",
+  "alt": "Restriped retail parking lot with yellow lines and a blue ADA stall",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "ada-access-aisle-yellow-striping": {
+  "slug": "ada-access-aisle-yellow-striping",
+  "cat": "striping",
+  "alt": "Yellow ADA access aisle striping beside a brick commercial building",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "white-directional-arrows-lane-line": {
+  "slug": "white-directional-arrows-lane-line",
+  "cat": "striping",
+  "alt": "White directional arrows and a curved lane line painted on a business entrance drive",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "no-parking-stencil-white-box": {
+  "slug": "no-parking-stencil-white-box",
+  "cat": "striping",
+  "alt": "White NO PARKING stencil inside a painted box on a small parking area",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "warehouse-floor-line-marking-yellow-red": {
+  "slug": "warehouse-floor-line-marking-yellow-red",
+  "cat": "warehouse",
+  "alt": "Yellow and red safety line layout painted on a warehouse floor",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "warehouse-floor-lane-layout": {
+  "slug": "warehouse-floor-lane-layout",
+  "cat": "warehouse",
+  "alt": "Warehouse floor with yellow lane boxes and a red divider line",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "warehouse-floor-line-marking-dock-doors": {
+  "slug": "warehouse-floor-line-marking-dock-doors",
+  "cat": "warehouse",
+  "alt": "Marked work zones on an industrial floor in front of dock doors",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "warehouse-red-yellow-lines-close": {
+  "slug": "warehouse-red-yellow-lines-close",
+  "cat": "warehouse",
+  "alt": "Close view of crisp red and yellow floor marking lines in a warehouse",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "warehouse-yellow-lines-lit-bay": {
+  "slug": "warehouse-yellow-lines-lit-bay",
+  "cat": "warehouse",
+  "alt": "Yellow floor layout lines in a lit warehouse bay",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-orange-cones": {
+  "slug": "driveway-sealcoat-orange-cones",
+  "cat": "sealcoating",
+  "alt": "Freshly sealcoated black driveway with orange cones beside a two-story home",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-curved-apron": {
+  "slug": "driveway-sealcoat-curved-apron",
+  "cat": "sealcoating",
+  "alt": "Newly sealcoated curved driveway beside a lawn and garden shed",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-grass-edge": {
+  "slug": "driveway-sealcoat-grass-edge",
+  "cat": "sealcoating",
+  "alt": "Sealcoated driveway with a clean hand-cut edge along the grass",
+  "w": 450,
+  "h": 600,
+  "sw": 450,
+  "sh": 600
+ },
+ "driveway-sealcoat-long-drive": {
+  "slug": "driveway-sealcoat-long-drive",
+  "cat": "sealcoating",
+  "alt": "Long residential driveway freshly sealcoated in black",
+  "w": 450,
+  "h": 600,
+  "sw": 450,
+  "sh": 600
+ },
+ "driveway-sealcoat-wide-apron": {
+  "slug": "driveway-sealcoat-wide-apron",
+  "cat": "sealcoating",
+  "alt": "Wide sealcoated driveway apron in front of a two-car garage",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-caution-tape": {
+  "slug": "driveway-sealcoat-caution-tape",
+  "cat": "sealcoating",
+  "alt": "Sealcoated driveway with caution tape marking the curing zone",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-stamped-walkway": {
+  "slug": "driveway-sealcoat-stamped-walkway",
+  "cat": "sealcoating",
+  "alt": "Black sealcoated driveway next to a stamped concrete walkway",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-sloped-cape": {
+  "slug": "driveway-sealcoat-sloped-cape",
+  "cat": "sealcoating",
+  "alt": "Sloped driveway sealcoated in front of a Cape Cod style home",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-glossy-wet": {
+  "slug": "driveway-sealcoat-glossy-wet",
+  "cat": "sealcoating",
+  "alt": "Wet-look fresh sealcoat on a driveway in front of a brick colonial",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-garden-edge": {
+  "slug": "driveway-sealcoat-garden-edge",
+  "cat": "sealcoating",
+  "alt": "Freshly sealcoated driveway running alongside flower beds",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-long-ranch": {
+  "slug": "driveway-sealcoat-long-ranch",
+  "cat": "sealcoating",
+  "alt": "Long ranch house driveway with fresh sealcoat and caution tape",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-long-evergreens": {
+  "slug": "driveway-sealcoat-long-evergreens",
+  "cat": "sealcoating",
+  "alt": "Long driveway bordered by evergreens with sealed surface cracks",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-small-home": {
+  "slug": "driveway-sealcoat-small-home",
+  "cat": "sealcoating",
+  "alt": "Narrow driveway at a small home sealcoated in even black",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-fall-tree": {
+  "slug": "driveway-sealcoat-fall-tree",
+  "cat": "sealcoating",
+  "alt": "Sealcoated driveway under a fall maple tree",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-autumn-garage": {
+  "slug": "driveway-sealcoat-autumn-garage",
+  "cat": "sealcoating",
+  "alt": "Sharp black sealcoat in front of a garage on an autumn day",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-resurfaced-edge-gravel": {
+  "slug": "driveway-resurfaced-edge-gravel",
+  "cat": "sealcoating",
+  "alt": "Freshly laid asphalt driveway edge with gravel shoulder and caution tape",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "private-lane-fresh-asphalt": {
+  "slug": "private-lane-fresh-asphalt",
+  "cat": "sealcoating",
+  "alt": "Private lane with fresh asphalt through the trees",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "private-drive-fresh-asphalt-house": {
+  "slug": "private-drive-fresh-asphalt-house",
+  "cat": "sealcoating",
+  "alt": "New asphalt driveway leading up to a large home",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-fresh-asphalt-leaves": {
+  "slug": "driveway-fresh-asphalt-leaves",
+  "cat": "sealcoating",
+  "alt": "Fresh black asphalt apron with autumn leaves",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-fresh-asphalt-garage": {
+  "slug": "driveway-fresh-asphalt-garage",
+  "cat": "sealcoating",
+  "alt": "Freshly finished asphalt pad in front of a double garage",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "ada-stall-white-outline-brick-building": {
+  "slug": "ada-stall-white-outline-brick-building",
+  "cat": "ada",
+  "alt": "ADA parking stall with white outline and access aisle hatching beside a historic building",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "ada-stall-white-hatching-wood-deck": {
+  "slug": "ada-stall-white-hatching-wood-deck",
+  "cat": "ada",
+  "alt": "White hatched ADA access aisle and symbol on a small commercial lot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "loading-zone-stencil-striping": {
+  "slug": "loading-zone-stencil-striping",
+  "cat": "ada",
+  "alt": "Loading zone stencil and diagonal hatching in front of a commercial entrance",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "ada-blue-symbol-night-striping": {
+  "slug": "ada-blue-symbol-night-striping",
+  "cat": "ada",
+  "alt": "Blue ADA symbols and hatched access aisles painted at night",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "parking-stalls-wheel-stops-white-lines": {
+  "slug": "parking-stalls-wheel-stops-white-lines",
+  "cat": "ada",
+  "alt": "White parking stalls with wheel stops beside a lawn",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "night-striping-ada-stall-cones": {
+  "slug": "night-striping-ada-stall-cones",
+  "cat": "ada",
+  "alt": "Night striping crew work on a blue ADA stall surrounded by cones",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "empty-lot-night-white-stalls": {
+  "slug": "empty-lot-night-white-stalls",
+  "cat": "ada",
+  "alt": "Large commercial lot restriped overnight with crisp white stall lines",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "striper-machine-night-lot": {
+  "slug": "striper-machine-night-lot",
+  "cat": "ada",
+  "alt": "Line striping machine on a freshly marked commercial lot at night",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "night-lot-blue-ada-hatching": {
+  "slug": "night-lot-blue-ada-hatching",
+  "cat": "ada",
+  "alt": "Blue ADA symbol and hatching on a lot lit by street lights",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "shopping-lot-ada-hatching-night": {
+  "slug": "shopping-lot-ada-hatching-night",
+  "cat": "ada",
+  "alt": "Hatched ADA access aisle in a shopping center lot at night",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "dusk-lot-stall-lines-fresh-paint": {
+  "slug": "dusk-lot-stall-lines-fresh-paint",
+  "cat": "ada",
+  "alt": "Fresh white stall lines on blacktop at dusk",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "numbered-parking-stall-white": {
+  "slug": "numbered-parking-stall-white",
+  "cat": "striping",
+  "alt": "Numbered parking stall freshly painted in white",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "small-business-lot-numbered-stalls": {
+  "slug": "small-business-lot-numbered-stalls",
+  "cat": "striping",
+  "alt": "Numbered white stalls on a small business parking lot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "lot-with-ada-hatching-aerial": {
+  "slug": "lot-with-ada-hatching-aerial",
+  "cat": "striping",
+  "alt": "Parking lot with ADA hatching seen from an elevated angle",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "lot-arrows-white-center-line": {
+  "slug": "lot-arrows-white-center-line",
+  "cat": "striping",
+  "alt": "White arrows and a center line directing traffic in a parking lot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "yellow-orange-curb-lines-lot": {
+  "slug": "yellow-orange-curb-lines-lot",
+  "cat": "striping",
+  "alt": "Yellow and orange line work across a wide commercial lot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "residential-lot-white-stalls": {
+  "slug": "residential-lot-white-stalls",
+  "cat": "striping",
+  "alt": "White stall lines on a small residential property lot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "reserved-stencil-night": {
+  "slug": "reserved-stencil-night",
+  "cat": "striping",
+  "alt": "RESERVED stencil on a parking stall in front of an office at night",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "loading-dock-lot-asphalt": {
+  "slug": "loading-dock-lot-asphalt",
+  "cat": "striping",
+  "alt": "Warehouse loading dock apron with sealed asphalt",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "church-lot-white-stalls-drain": {
+  "slug": "church-lot-white-stalls-drain",
+  "cat": "striping",
+  "alt": "Fresh white stall lines in a stone building lot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "church-lot-ada-spaces-wide": {
+  "slug": "church-lot-ada-spaces-wide",
+  "cat": "ada",
+  "alt": "Wide view of a lot with new white stalls and ADA spaces",
+  "w": 1600,
+  "h": 1200,
+  "sw": 640,
+  "sh": 480
+ },
+ "church-lot-ada-hatched-stalls": {
+  "slug": "church-lot-ada-hatched-stalls",
+  "cat": "ada",
+  "alt": "ADA stalls with blue symbols and hatched aisles in a restriped lot",
+  "w": 1600,
+  "h": 1200,
+  "sw": 640,
+  "sh": 480
+ },
+ "restriped-lot-shadow-white-lines": {
+  "slug": "restriped-lot-shadow-white-lines",
+  "cat": "striping",
+  "alt": "Restriped lot with fresh white lines and long afternoon shadows",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "office-park-stall-line-fresh": {
+  "slug": "office-park-stall-line-fresh",
+  "cat": "striping",
+  "alt": "New white stall line next to a lawn at an office park",
+  "w": 1600,
+  "h": 1200,
+  "sw": 640,
+  "sh": 480
+ },
+ "order-here-stencil-drive": {
+  "slug": "order-here-stencil-drive",
+  "cat": "striping",
+  "alt": "ORDER HERE stencil and curved arrow on a drive-through lane",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "rear-lot-stencils-yellow-curb": {
+  "slug": "rear-lot-stencils-yellow-curb",
+  "cat": "striping",
+  "alt": "Rear lot with stall lines, stencils and a yellow curb line beside a building",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "rear-lot-restriped-numbered": {
+  "slug": "rear-lot-restriped-numbered",
+  "cat": "striping",
+  "alt": "Numbered rear lot restriped with white lines and an ADA stall",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "rear-lot-fresh-stall-lines": {
+  "slug": "rear-lot-fresh-stall-lines",
+  "cat": "striping",
+  "alt": "Fresh stall lines and yellow curb marking on repaired asphalt",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "hot-pour-crack-sealing-melter": {
+  "slug": "hot-pour-crack-sealing-melter",
+  "cat": "cracks",
+  "alt": "Hot pour crack sealer filling a long crack across a parking lot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "hot-pour-crack-fill-lot-cracks": {
+  "slug": "hot-pour-crack-fill-lot-cracks",
+  "cat": "cracks",
+  "alt": "Crack sealing equipment and freshly filled cracks across a parking lot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "hot-pour-crack-sealing-crew": {
+  "slug": "hot-pour-crack-sealing-crew",
+  "cat": "cracks",
+  "alt": "Crew member applying hot rubber crack sealant with a pour pot",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "crack-filled-commercial-drive": {
+  "slug": "crack-filled-commercial-drive",
+  "cat": "cracks",
+  "alt": "Sealed cracks running along a commercial entrance drive",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ }
+}
