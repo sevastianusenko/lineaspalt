@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import PriceCalc from "@/components/PriceCalc";
-import { Breadcrumbs, CtaBand, FaqList, Icon, PageHero, SectionHead } from "@/components/ui";
+import { Breadcrumbs, CtaBand, FaqList, Icon, PageHero, Photo, SectionHead } from "@/components/ui";
 import { services } from "@/content/services";
 
 export const metadata: Metadata = {
@@ -28,15 +27,15 @@ export default function Pricing() {
       <PageHero
         eyebrow="Straight talk on price"
         title={<>What asphalt work costs in <mark className="hl">Lancaster County</mark></>}
-        lead="Lancaster Lines & Asphalt publishes its price ranges because most people do not get a straight answer. Use the quick check below, then ask for a written quote when you are ready."
+        lead="Lancaster Lines & Asphalt publishes its price ranges because most people do not get a straight answer. Use them to plan, then ask for a written quote when you are ready."
         image="driveway-sealcoat-glossy-wet"
       >
         <Link href="/contact/" className="btn btn-yellow">Get a written quote</Link>
       </PageHero>
 
       <section className="sec-grey py-20 lg:py-28">
-        <div className="wrap grid items-start gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
-          <PriceCalc />
+        <div className="wrap grid items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+          <div className="reveal photo aspect-[4/3]"><Photo slug="driveway-sealcoat-orange-cones" /></div>
           <div>
             <p className="eyebrow reveal">The $400 minimum</p>
             <h2 className="reveal mt-4 text-[clamp(28px,3.4vw,40px)]">Why we have a floor</h2>

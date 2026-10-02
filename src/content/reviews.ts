@@ -1,9 +1,15 @@
 export type Review = { name: string; text: string; job: string; date: string };
 
 // Public Google reviews of Lancaster Lines & Asphalt. Texts verbatim, pulled from the Google
-// review feed the old site stored (Trustindex, synced March 2026). The profile has 12 ratings,
-// 10 of them with text; the two rating-only reviews have nothing to show.
+// review feed the old site stored (Trustindex, synced March 2026), plus newer ones copied from
+// the GBP manager. The profile had 40 reviews, all 5 stars, on 2026-10-02.
 export const reviews: Review[] = [
+  {
+    name: "M Blunt",
+    job: "Long driveway sealcoating",
+    date: "2026-10-01",
+    text: "They did a beautiful job on my very long driveway, communicated effectively, showed up on time, and were a pleasure to work with. Great job!",
+  },
   {
     name: "Jerry Melnik",
     job: "Asphalt services",
@@ -68,12 +74,12 @@ export const reviews: Review[] = [
 
 // Longest, most specific reviews first for the home page; the full list keeps Google's order.
 export const featured: Review[] = [
-  reviews[2], // Andrew
-  reviews[5], // Bryan
-  reviews[6], // Max
-  reviews[3], // Steele
-  reviews[7], // Trent
-  reviews[8], // Christian
+  reviews[0], // M Blunt (newest)
+  reviews[3], // Andrew
+  reviews[6], // Bryan
+  reviews[7], // Max
+  reviews[4], // Steele
+  reviews[9], // Christian
 ];
 
 export const reviewMonth = (iso: string) =>

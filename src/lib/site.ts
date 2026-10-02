@@ -35,7 +35,7 @@ export const site = {
     facebook: "https://www.facebook.com/linesasphalt",
     instagram: "https://www.instagram.com/linesasphalt",
   },
-  rating: { value: "5.0", count: 12 },
+  rating: { value: "5.0", count: 40 },
   minJob: 400,
   founded: 2024,
 };

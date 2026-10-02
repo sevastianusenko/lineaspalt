@@ -26,12 +26,6 @@ await p.click('button[type=submit]');
 await p.waitForSelector('text=Request received');
 console.log('form: success state shown');
 
-// 3. calc
-await p.goto(base + '/pricing/', { waitUntil: 'networkidle' });
-await p.click('button[role=tab]:has-text("Re-striping")');
-await p.fill('#pc-n', '40');
-console.log('calc re-stripe 40 stalls ->', (await p.locator('[aria-live=polite] p').nth(1).innerText()));
-
 // 4. gallery lightbox
 await p.goto(base + '/gallery/', { waitUntil: 'networkidle' });
 await p.click('ul li button >> nth=0');

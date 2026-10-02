@@ -20,7 +20,7 @@ export default function Terms() {
             <p>These terms cover the use of this website, operated by {site.legalName}. By using the site you agree to them.</p>
             <h2>Estimates and price ranges</h2>
             <p>
-              Prices, ranges and the quick price check on this website are planning guides only. They are not a quote or an offer. We give a firm written price after we look at your property or photos of it. Our minimum job is ${site.minJob}.
+              Prices and price ranges on this website are planning guides only. They are not a quote or an offer. We give a firm written price after we look at your property or photos of it. Our minimum job is ${site.minJob}.
             </p>
             <h2>Written agreements</h2>
             <p>

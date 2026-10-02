@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Photo, SectionHead, ReviewCard, Stars, PostCard, LeadSection, TownChips, FaqList, Icon, GoogleBadge, ProjectCard } from "@/components/ui";
-import PriceCalc from "@/components/PriceCalc";
 import { services } from "@/content/services";
 import { towns } from "@/content/towns";
 import { featured } from "@/content/reviews";
@@ -206,7 +205,7 @@ export default function Home() {
       <section className="sec py-20 lg:py-28">
         <div className="wrap grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <div>
-            <SectionHead eyebrow="Straight talk on price" title={<>You get the price <mark className="hl">in writing</mark> before we start.</>} lead={`Pick a service, enter the size, and see the range ${site.name} typically charges in Lancaster County. It is built from the same numbers we use on real quotes.`} />
+            <SectionHead eyebrow="Straight talk on price" title={<>You get the price <mark className="hl">in writing</mark> before we start.</>} lead={`${site.name} publishes its typical price ranges, so you know the ballpark before you call. The exact number comes in writing after we see the job.`} />
             <dl className="mt-10 grid gap-6 sm:grid-cols-3">
               {[
                 ["$400", "Minimum job"],
@@ -221,7 +220,7 @@ export default function Home() {
             </dl>
             <Link href="/pricing/" className="more reveal mt-8">Full pricing guide <Arrow /></Link>
           </div>
-          <div className="reveal"><PriceCalc /></div>
+          <div className="reveal photo aspect-[4/3]"><Photo slug="driveway-sealcoat-glossy-wet" /></div>
         </div>
       </section>
 
