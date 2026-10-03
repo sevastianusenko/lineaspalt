@@ -16,7 +16,6 @@ export type Service = {
   includes: { t: string; d: string }[];
   signs: { title: string; items: string[] };
   process: { t: string; d: string }[];
-  price: { lead: string; rows: [string, string][]; note: string };
   faqs: Faq[];
   related: string[];
   posts: string[];
@@ -68,19 +67,8 @@ export const services: Service[] = [
       { t: "Paint", d: "Lines go down with a striping machine for consistent width. Stencils and symbols are placed by hand." },
       { t: "Dry and reopen", d: "Traffic paint dries quickly. We use cones until it is safe to drive on and reopen the lot the same day." },
     ],
-    price: {
-      lead: "Every lot is different, so the final number comes after we see it. These are the ranges we use to plan jobs.",
-      rows: [
-        ["Re-stripe over existing lines", "$4 to $6 per stall"],
-        ["New layout from scratch", "$8 to $12 per stall"],
-        ["ADA symbol", "$25 to $45 each"],
-        ["Directional arrows", "$15 to $30 each"],
-        ["Minimum job", "$400"],
-      ],
-      note: "Stencils, crosshatching and blackout work are priced on top. Bundling striping with sealcoating or crack filling spreads one visit across more work.",
-    },
     faqs: [
-      { q: "How much does line striping cost in Lancaster, PA?", a: "A standard re-stripe usually runs $4 to $6 per stall, and a brand new layout runs $8 to $12 per stall. Our minimum job is $400. Stencils, ADA symbols and arrows are added on top. We give a written quote after seeing the lot." },
+      { q: "How is line striping priced?", a: "By the size of the lot and what goes on it: the number of stalls, whether the layout is new or a re-stripe, and how many stencils, ADA symbols and arrows are needed. We give a free written quote after seeing the lot or photos of it." },
       { q: "How long does striping take to dry?", a: "Traffic paint is typically dry to the touch within an hour in normal conditions, above about 50 degrees F and without rain. We keep the area coned off until it is safe, and most lots reopen the same day." },
       { q: "Can you stripe at night or on a weekend?", a: "Yes. A lot of our commercial work is scheduled early in the morning, in the evening, or on weekends so that customers and staff are not disrupted." },
       { q: "Do I need to sealcoat before striping?", a: "If the lot is due for sealcoating, do that first. Fresh sealcoat needs to cure before it gets painted, usually 24 to 48 hours. We coordinate both so the lot goes from sealed to striped without a long gap." },
@@ -134,24 +122,13 @@ export const services: Service[] = [
       { t: "Chalk and cone", d: "Every line is snapped and every stall is verified. The work area is coned." },
       { t: "Stripe and stencil", d: "Machine for the lines, hand placement for stencils and symbols, then a final walk with you." },
     ],
-    price: {
-      lead: "A 20 to 30 stall lot with basic markings usually lands between our $400 minimum and about $700. Here is how the pieces add up.",
-      rows: [
-        ["Re-stripe, existing layout", "$4 to $6 per stall"],
-        ["New layout, from scratch", "$8 to $12 per stall"],
-        ["ADA symbol", "$25 to $45 each"],
-        ["Arrows", "$15 to $30 each"],
-        ["Minimum job", "$400"],
-      ],
-      note: "Send us the address and a few photos and we can usually price a lot from satellite view. A site visit makes the quote exact.",
-    },
     faqs: [
       { q: "How often should I re-stripe my parking lot?", a: "Every one to two years for most commercial lots. If you cannot clearly see the lines from fifty feet away, it is time." },
       { q: "Can you re-stripe without closing my business?", a: "Usually yes. We work in sections, or schedule early mornings, evenings and weekends. Paint dries fast and the lot reopens the same day." },
       { q: "Do you paint over old lines or remove them first?", a: "If the layout stays the same, we paint over the existing lines. If it changes, we black out the old lines so drivers are not following the wrong markings." },
       { q: "Do you handle ADA stalls and signage?", a: "We handle the pavement markings, stall sizes and access aisles. Signs are separate, and we will tell you what the sign has to say and how high it has to be mounted so your contractor or sign company can finish the job." },
-      { q: "What does it cost to stripe a 30 space lot?", a: "A basic re-stripe of a 30 stall lot usually falls between $400 and $700 once ADA symbols and arrows are added. A new layout costs more because of the measuring and chalk work." },
-      { q: "What is the minimum job?", a: "$400. If your lot is small, ask about bundling striping with crack filling or sealcoating so the visit covers more work." },
+      { q: "Is a new layout more work than a re-stripe?", a: "Yes. A re-stripe follows lines that are already there. A new layout means measuring the lot, planning stall counts and ADA stalls, and snapping chalk for every line before painting." },
+      { q: "My lot is small. Is it worth calling?", a: "Yes. Small lots are welcome. Bundling striping with crack filling or sealcoating in the same visit makes the most of the trip." },
     ],
     related: ["ada-parking-lot-striping-lancaster-pa", "fire-lane-marking-lancaster-pa", "sealcoating-lancaster-pa", "parking-lot-maintenance-lancaster-pa"],
     posts: ["how-we-re-striped-a-26-space-commercial-lot-in-lancaster-pa-and-why-the-details-matter", "parking-lot-restriping", "parking-lot-striping-cost"],
@@ -201,16 +178,6 @@ export const services: Service[] = [
       { t: "Layout on the pavement", d: "Chalk lines for stalls, aisles and symbols so you can see the result before paint." },
       { t: "Paint and verify", d: "Stalls, hatching and symbols painted, then measured again against the plan." },
     ],
-    price: {
-      lead: "ADA work is usually part of a larger striping job. The symbol itself is a small line item.",
-      rows: [
-        ["ADA symbol", "$25 to $45 each"],
-        ["Stall and hatching", "Included in per stall pricing"],
-        ["Full lot re-stripe", "$4 to $6 per stall"],
-        ["Minimum job", "$400"],
-      ],
-      note: "If your lot needs an extra accessible stall, we will show you the cleanest place to add one and what it costs in lost parking.",
-    },
     faqs: [
       { q: "How many ADA parking spaces does my lot need?", a: "It depends on the total number of stalls. 1 to 25 stalls needs one. 26 to 50 needs two. 51 to 75 needs three. 76 to 100 needs four. Larger lots follow the 2010 ADA Standards table, and we will count yours." },
       { q: "What is a van accessible stall?", a: "At least one of every six accessible stalls must be van accessible. That means a 132 inch wide stall with a 60 inch access aisle, or a 96 inch stall with a 96 inch aisle, plus signage that says van accessible." },
@@ -266,15 +233,6 @@ export const services: Service[] = [
       { t: "Paint and stencil", d: "Curb paint goes on first, then stenciled wording at the agreed spacing." },
       { t: "Walk and cone", d: "A final walk checks every stencil. Cones stay until the paint is dry." },
     ],
-    price: {
-      lead: "Fire lane work is priced by the linear foot of curb, plus stencils. It depends on the length and the condition of the curb.",
-      rows: [
-        ["Curb painting", "Quoted per linear foot after a site visit"],
-        ["Stenciled lettering", "Priced per stencil"],
-        ["Minimum job", "$400"],
-      ],
-      note: "We can usually price a fire lane from a photo and a rough length. Walking the property makes it exact.",
-    },
     faqs: [
       { q: "Who decides where my fire lane goes?", a: "Your municipality and fire official. We paint to their requirements, and we can help you prepare the layout to take to them." },
       { q: "What color should a fire lane curb be?", a: "Red is common, but some municipalities use yellow or have their own rules. We check before we paint." },
@@ -330,15 +288,6 @@ export const services: Service[] = [
       { t: "Chalk layout", d: "Lines are chalked so you can approve the plan before painting." },
       { t: "Paint and cure", d: "Lines are painted with sharp edges and clean corners, then cured before traffic returns." },
     ],
-    price: {
-      lead: "Floor marking is quoted after a visit, by linear foot of line and the amount of prep the floor needs.",
-      rows: [
-        ["Lines", "Quoted per linear foot"],
-        ["Symbols and wording", "Priced per stencil"],
-        ["Minimum job", "$400"],
-      ],
-      note: "Large floors are often done in sections or off hours so operations keep running.",
-    },
     faqs: [
       { q: "How long does it take to mark a warehouse floor?", a: "A small bay can be done in a day. Larger floors take longer, and we can work in sections to keep operations running. The time depends on the amount of line and the prep." },
       { q: "Will the paint hold up to forklifts?", a: "Properly prepped and cured paint holds up well in normal use, but high traffic lanes will wear first. We tell you where to expect touch ups." },
@@ -394,18 +343,8 @@ export const services: Service[] = [
       { t: "Edge and coat", d: "Hand-cut the edges, then apply two coats." },
       { t: "Cure", d: "Keep traffic off for 24 to 48 hours, depending on weather." },
     ],
-    price: {
-      lead: "Driveways are priced by size and condition. Commercial lots are priced by square footage after a site visit.",
-      rows: [
-        ["Small driveway, up to 800 sq ft", "$400 (our minimum)"],
-        ["Average driveway, 800 to 1,500 sq ft", "$400 to $550"],
-        ["Large driveway, 1,500 to 2,500 sq ft", "$550 to $700"],
-        ["Extra large, 2,500+ sq ft", "$700 and up, quoted"],
-      ],
-      note: "Crack filling is priced separately if the surface needs it. Most homeowners spend $400 to $700 every three or four years.",
-    },
     faqs: [
-      { q: "How much does sealcoating cost in Lancaster, PA?", a: "Most residential driveways run $400 to $700. Our minimum job is $400. Large driveways and commercial lots are priced by square footage after a site visit." },
+      { q: "How is sealcoating priced?", a: "By size and condition. Driveways are quoted from a quick look or a few photos; commercial lots are measured on a site visit. You always get a free written price before we start." },
       { q: "How often should I sealcoat?", a: "Every three to four years for most driveways. Busy commercial lots often need it every two to three years." },
       { q: "How long before I can drive on it?", a: "Plan on 24 to 48 hours, depending on temperature and humidity. We give you a clear time and leave cones or tape in place." },
       { q: "Can you sealcoat new asphalt?", a: "Not right away. New asphalt needs six to twelve months to cure before it is sealed. Sealing too early traps oils and the coating can fail." },
@@ -421,12 +360,12 @@ export const services: Service[] = [
     name: "Driveway Sealcoating",
     group: "protection",
     short: "Residential driveway sealcoating with crack filling, hand-cut edges and two coats.",
-    metaTitle: "Driveway Sealcoating in Lancaster, PA | From $400",
+    metaTitle: "Driveway Sealcoating in Lancaster, PA | Lines & Asphalt",
     metaDescription:
-      "Driveway sealcoating in Lancaster County, PA. Prep, crack filling, two coats and hand-cut edges. Most driveways $400 to $700. Free estimates.",
+      "Driveway sealcoating in Lancaster County, PA. Prep, crack filling, two coats and hand-cut edges. Free written estimates, call 717-808-1600.",
     h1: "Driveway sealcoating in Lancaster County",
     kicker: "For homeowners",
-    lead: "A sealed driveway looks sharp and lasts years longer. We clean it, fill the cracks, cut the edges by hand and apply two coats. Most driveways cost $400 to $700 and the work takes a day.",
+    lead: "A sealed driveway looks sharp and lasts years longer. We clean it, fill the cracks, cut the edges by hand and apply two coats. Most driveways are done in a single day.",
     hero: "driveway-sealcoat-fall-tree",
     icon: "coating",
     gallery: ["driveway-sealcoat-autumn-garage", "driveway-sealcoat-small-home", "driveway-sealcoat-long-ranch", "driveway-sealcoat-sloped-cape", "driveway-sealcoat-grass-edge", "driveway-sealcoat-curved-apron", "driveway-sealcoat-orange-cones", "driveway-sealcoat-long-drive"],
@@ -460,19 +399,8 @@ export const services: Service[] = [
       { t: "Coats", d: "Two coats applied with a spray wand and squeegee for even coverage." },
       { t: "Cure", d: "Stay off for 24 to 48 hours. We tell you the exact time." },
     ],
-    price: {
-      lead: "Driveway pricing is simple. It depends on size, with a $400 minimum.",
-      rows: [
-        ["Small, up to 800 sq ft", "$400"],
-        ["Average, 800 to 1,500 sq ft", "$400 to $550"],
-        ["Large, 1,500 to 2,500 sq ft", "$550 to $700"],
-        ["Extra large, 2,500+ sq ft", "$700 and up, quoted"],
-        ["Crack filling", "$1 to $3 per linear foot"],
-      ],
-      note: "Why $400 as a minimum? The crew, equipment and material are the same for a small driveway as a large one. Our cost breakdown is in the pricing post linked below.",
-    },
     faqs: [
-      { q: "What does driveway sealcoating cost?", a: "Most driveways run $400 to $700. Our minimum job is $400. Large driveways and ones that need crack repair cost more." },
+      { q: "How do I get a price for my driveway?", a: "Send a few photos or ask for a visit. We look at the size and condition and give you a free written price. Large driveways and ones that need crack repair take more time and material." },
       { q: "Do I need to be home?", a: "Not during the work, but we want to do a walk through with you at the end. We also need cars out of the driveway." },
       { q: "How long does it last?", a: "Three to four years on a typical residential driveway. Sun and traffic wear it down gradually." },
       { q: "Can you seal my driveway after cracks are filled?", a: "Yes, and that is the right order. Crack filling comes first, then sealer on top." },
@@ -526,18 +454,9 @@ export const services: Service[] = [
       { t: "Heat and fill", d: "Heat the rubber and fill the cracks from the bottom up." },
       { t: "Finish", d: "Squeegee flush and let it cure before traffic returns." },
     ],
-    price: {
-      lead: "Hot pour crack sealing is priced per linear foot, with a minimum service call.",
-      rows: [
-        ["Hot pour sealing", "$1 to $3 per linear foot"],
-        ["Typical residential driveway", "$400 to $800"],
-        ["Minimum service call", "$400"],
-      ],
-      note: "Commercial lots are quoted by total footage, and the per foot rate drops as the job gets bigger.",
-    },
     faqs: [
       { q: "What is the difference between hot pour and cold pour crack filler?", a: "Hot pour is a rubberized material heated to about 400 degrees. It bonds to the sides of the crack and stays flexible in the cold. Cold pour is easier to apply but typically doesn't last as long in our climate." },
-      { q: "How much does crack filling cost?", a: "Hot pour sealing generally runs $1 to $3 per linear foot, and most residential jobs land between $400 and $800. Our minimum is $400." },
+      { q: "How is crack filling priced?", a: "By the total length of cracks and how much cleaning they need. Commercial lots are measured on site. Quotes are free and in writing." },
       { q: "Can you fill cracks in winter?", a: "Cracks must be clean and dry. Light work is possible on dry days, but the best window is fall, before winter sets in." },
       { q: "How long does it last?", a: "With proper prep, several years. It eventually wears and can be redone." },
       { q: "Should I fill cracks before sealcoating?", a: "Yes. Sealcoating by itself does not fill cracks. Fill first, then seal." },
@@ -590,17 +509,8 @@ export const services: Service[] = [
       { t: "Base and tack", d: "Repair the base if needed and apply tack coat." },
       { t: "Fill and compact", d: "Hot mix in lifts, compacted, finished flush and sealed." },
     ],
-    price: {
-      lead: "Pothole pricing depends on how many holes there are and what is under them.",
-      rows: [
-        ["One to three typical potholes", "$400 to $800"],
-        ["Multiple holes with base damage", "$800 to $2,500+"],
-        ["Minimum service call", "$400"],
-      ],
-      note: "Walk your whole property before we come. The cost of fixing a few extra holes while we are there is small compared to a second trip.",
-    },
     faqs: [
-      { q: "How much does pothole repair cost?", a: "One to three typical potholes usually run $400 to $800. Multiple holes with base damage can run $800 to $2,500 or more. Our minimum is $400." },
+      { q: "How is pothole repair priced?", a: "By the number of holes, their depth and the condition of the base underneath. We look at the holes and give you a free written price before any work starts." },
       { q: "Why do you cut the hole bigger?", a: "The edges of a pothole are weak. Cutting back to sound pavement gives the patch something solid to bond to." },
       { q: "What is the difference between cold patch and hot mix?", a: "Cold patch is for emergency winter repairs. Hot mix is a permanent repair and is used when temperatures allow." },
       { q: "Will the patch match my driveway?", a: "A fresh patch is black and will blend over time. Sealcoating the whole driveway makes everything uniform." },
@@ -654,17 +564,6 @@ export const services: Service[] = [
       { t: "Schedule", d: "We schedule around business hours and the weather." },
       { t: "Work and review", d: "We do the work and walk it with you at the end." },
     ],
-    price: {
-      lead: "Pricing for maintenance is the sum of the parts. You can see the ranges for each piece below.",
-      rows: [
-        ["Crack filling", "$1 to $3 per linear foot"],
-        ["Pothole repair", "$400 minimum"],
-        ["Sealcoating", "Quoted by square foot"],
-        ["Re-striping", "$4 to $6 per stall"],
-        ["Minimum job", "$400"],
-      ],
-      note: "Bundling services in a single visit spreads the cost of mobilizing the crew across more work.",
-    },
     faqs: [
       { q: "What order should lot maintenance be done in?", a: "Crack filling first, then pothole and base repair, then sealcoating, then striping. Each step protects the next one." },
       { q: "How often should I maintain a parking lot?", a: "Fill cracks every year, sealcoat every two to three years for busy lots, and re-stripe every one to two years." },

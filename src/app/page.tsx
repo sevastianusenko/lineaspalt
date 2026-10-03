@@ -23,8 +23,8 @@ const core3 = [
 ];
 
 const homeFaqs = [
-  { q: "What is your minimum job?", a: "$400. Crew, equipment and travel cost the same for a small job as a large one. If your job is small, ask about bundling services into one visit." },
-  { q: "How much does a driveway sealcoat cost?", a: "Most driveways run $400 to $700, depending on size and condition. Crack filling is priced separately when needed. You get a written price after we see or measure the driveway." },
+  { q: "How do I get a price?", a: "Call or send the form with the address and a few photos. We look at the job, in person or from photos, and give you a free written quote. No obligation." },
+  { q: "Do you take small jobs?", a: "Yes. Small driveways and small lots are welcome. Bundling several services into one visit makes the most of the trip." },
   { q: "Do you work on commercial and residential properties?", a: "Both. We do driveways for homeowners and parking lots, warehouse floors and fire lanes for businesses, churches, schools, HOAs and property managers." },
   { q: "How far do you travel?", a: "About 40 miles from Lancaster. That covers the whole county and parts of Lebanon, Berks and York counties for larger commercial jobs." },
   { q: "Are you insured?", a: "Yes. We are fully insured for residential and commercial work." },
@@ -65,7 +65,7 @@ export default function Home() {
               <div>
                 <dt className="text-[14px] text-muted">Estimates</dt>
                 <dd className="mt-1 font-display text-[17px] font-bold text-black">Free, in writing</dd>
-                <dd className="text-[14px] text-muted">Minimum job ${site.minJob}</dd>
+                <dd className="text-[14px] text-muted">No obligation</dd>
               </div>
               <div>
                 <dt className="text-[14px] text-muted">Coverage</dt>
@@ -198,29 +198,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ---------------- PRICING ---------------- */}
-      <section className="sec py-20 lg:py-28">
-        <div className="wrap grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
-          <div>
-            <SectionHead eyebrow="Straight talk on price" title={<>You get the price <mark className="hl">in writing</mark> before we start.</>} lead={`${site.name} publishes its typical price ranges, so you know the ballpark before you call. The exact number comes in writing after we see the job.`} />
-            <dl className="mt-10 grid gap-6 sm:grid-cols-3">
-              {[
-                ["$400", "Minimum job"],
-                ["$400 to $700", "Most driveways, sealcoated"],
-                ["$4 to $6", "Per stall to re-stripe"],
-              ].map(([big, small]) => (
-                <div key={big} className="reveal border-t-4 border-yellow pt-3">
-                  <dt className="font-display text-[26px] font-bold text-black">{big}</dt>
-                  <dd className="text-[15px] text-muted">{small}</dd>
-                </div>
-              ))}
-            </dl>
-            <Link href="/pricing/" className="more reveal mt-8">Full pricing guide <Arrow /></Link>
-          </div>
-          <div className="reveal photo aspect-[4/3]"><Photo slug="driveway-sealcoat-glossy-wet" /></div>
         </div>
       </section>
 

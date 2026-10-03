@@ -53,7 +53,7 @@ export default function About() {
           <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               ["We show up", "On the day we said, at the time we said. If the weather will ruin the job, we call and reschedule instead of doing it wrong."],
-              ["The price is in writing", "You get a clear quote before work starts, and the invoice matches it. Our minimum is $400 and we tell you why."],
+              ["The price is in writing", "You get a clear quote before work starts, and the invoice matches it. No surprises."],
               ["We tell you when not to", "If sealcoating will not help, if new asphalt needs a year to cure, or if a patch will not hold, we say so, even when it costs us the job."],
               ["We clean up", "Cones, tape and equipment go with us. We walk the finished job with you before we leave."],
             ].map(([t, d], i) => (

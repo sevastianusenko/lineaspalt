@@ -108,7 +108,7 @@ Old lines can be ground off or painted out and new lines laid. It is easier if t
 
 ### How do we know how many feet of line we have?
 
-Sketch the layout with rough dimensions and send photos. Floor marking is quoted per linear foot plus prep and any stencils, with a $400 minimum. We confirm the footage on site before the price is final.
+Sketch the layout with rough dimensions and send photos. Floor marking is quoted by the linear foot of line, plus prep and any stencils. We confirm the footage on site before the price is final.
 
 ## Details
 

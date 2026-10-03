@@ -101,9 +101,9 @@ Different cracks come from different causes, and knowing which is which tells yo
 
 The first four can be sealed. The last one cannot.
 
-## What a job like this costs
+## How a job like this is priced
 
-Hot pour crack sealing is priced by the linear foot of crack, usually $1 to $3 per foot depending on the width of the cracks and how much cleaning they need. Our minimum service call is $400, because the melter, the material and the crew cost the same whether we seal forty feet or four hundred. On a commercial lot the per foot rate drops as the footage goes up. Most residential driveways land between $400 and $800. The details are in [crack filling cost in Lancaster County](/crack-filling-cost-lancaster-county/).
+Hot pour crack sealing is priced by the total length of crack, plus how much cleaning and routing the cracks need. Wide, packed cracks take longer than clean hairline-to-pencil width ones. On a commercial lot we measure on site and put the price in writing. If the lot is also due for sealcoating, doing both in one visit saves a second trip. More on how crack sealing is priced is in [crack filling cost in Lancaster County](/crack-filling-cost-lancaster-county/).
 
 If the lot is also due for sealcoating, bundling the two into one visit saves the second trip.
 

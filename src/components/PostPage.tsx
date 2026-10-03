@@ -83,7 +83,7 @@ export default function PostPage({ p }: { p: Post }) {
               <p className="eyebrow">Talk to {site.owner}</p>
               <h2 className="mt-3 text-[28px]">Have a surface you want looked at?</h2>
               <p className="mt-3 text-[16px] text-muted">
-                We give free estimates across Lancaster County and a written price before any work starts. Our minimum job is ${site.minJob}.
+                We give free estimates across Lancaster County and a written price before any work starts.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
                 <Link href="/contact/" className="btn btn-yellow">Get a free quote</Link>

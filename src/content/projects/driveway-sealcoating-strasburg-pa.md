@@ -95,9 +95,9 @@ How we handle those edges:
 
 If your driveway has decorative concrete, pavers or fresh paint next to it, mention it when you book. It changes how we plan the edges, not the price.
 
-## What a driveway like this costs
+## How a driveway like this is priced
 
-Driveway sealcoating in Lancaster County is priced by size and condition. Most driveways run $400 to $700, and $400 is our minimum job. A small one or two car driveway usually lands at the minimum. An average two car driveway with some extra length runs $400 to $550. Long driveways with turnarounds and parking pads run $550 to $700. Crack filling is priced on top when the surface needs it. The full breakdown, including why the minimum is what it is, is in [how much sealcoating costs in Lancaster, PA](/sealcoating-cost-lancaster-pa/).
+Driveway sealcoating is priced by size and condition. A long driveway with turnarounds takes more material and time than a short two car drive, and cracks that need hot rubber filling add to the job. We look at the driveway, in person or from a few photos, and give you a free written price before anything starts. Sealcoating costs a small fraction of what repaving does, which is the whole reason to do it on schedule.
 
 ## Questions homeowners ask about sealcoating
 
@@ -128,4 +128,4 @@ No. Sealer is a thin protective layer. Cracks need to be filled first, and fille
 - Two coats applied top down, all edges including the full walkway cut in by hand, concrete kept clean.
 - Surface cleaned, oil spots primed, cure time and care instructions given to the homeowner.
 
-Lancaster Lines & Asphalt seals driveways across Lancaster County, including right here in Strasburg. Most driveways run $400 to $700, and you get a written price before we start. See the [driveway sealcoating page](/driveway-sealcoating-lancaster-pa/) and our [Strasburg service page](/asphalt-strasburg-pa/), or [request a free quote](/contact/).
+Lancaster Lines & Asphalt seals driveways across Lancaster County, including right here in Strasburg. You get a free written price before we start. See the [driveway sealcoating page](/driveway-sealcoating-lancaster-pa/) and our [Strasburg service page](/asphalt-strasburg-pa/), or [request a free quote](/contact/).

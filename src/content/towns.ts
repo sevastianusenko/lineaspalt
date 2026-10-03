@@ -553,8 +553,8 @@ export function townFaqs(t: Town): Faq[] {
       a: `Yes. We provide sealcoating, crack filling, pothole repair and line striping in ${t.name} and ${t.area}. Call 717-808-1600 or send the contact form and we will set up a free on-site estimate.`,
     },
     {
-      q: `How much does sealcoating cost in ${t.name}?`,
-      a: "Most residential driveways run $400 to $700, and our minimum job is $400. Commercial lots are priced by square footage after a site visit. You always get a written price before we start.",
+      q: `How do I get a sealcoating price in ${t.name}?`,
+      a: "It depends on the size and condition of the surface. We look at it, in person or from photos, and give you a free written price before any work starts.",
     },
     {
       q: `Can you repair potholes in ${t.name} in the winter?`,

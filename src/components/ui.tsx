@@ -261,7 +261,7 @@ export function LeadSection({ title = "Get your free quote", text, defaultServic
             {[
               "Send the form or call. Photos help but are not required.",
               "We visit or review your photos and measure the job.",
-              `You get a clear written price. The minimum job is $${site.minJob}.`,
+              "You get a clear written price. No obligation.",
             ].map((t, i) => (
               <li key={t} className="flex items-start gap-4">
                 <span className="grid h-10 w-10 shrink-0 place-items-center bg-yellow font-display text-[17px] font-bold text-black">{i + 1}</span>

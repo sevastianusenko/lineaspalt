@@ -28,7 +28,7 @@ export default function Services() {
       >
         <div className="flex flex-wrap gap-4">
           <Link href="/contact/" className="btn btn-yellow">Free quote</Link>
-          <Link href="/pricing/" className="btn btn-outline">See pricing</Link>
+          <a href="tel:+17178081600" className="btn btn-outline">Call 717-808-1600</a>
         </div>
       </PageHero>
 
@@ -44,7 +44,6 @@ export default function Services() {
                     <span className="icon-tile"><Icon name={s.icon} size={88} /></span>
                     <span className="mt-4 block font-display text-[24px] font-bold text-black">{s.name}</span>
                     <span className="mt-3 block text-[16px] text-muted">{s.short}</span>
-                    <span className="mt-5 block text-[14px] text-faint">From {s.price.rows.find(([k]) => /minimum/i.test(k))?.[1] ?? "$400"}</span>
                     <span className="more mt-5">
                       Learn more
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M5 12h14M13 6l6 6-6 6" /></svg>

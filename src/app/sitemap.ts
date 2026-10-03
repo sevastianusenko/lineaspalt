@@ -17,7 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     stat("/", 1, "weekly"),
     stat("/services/", 0.9),
     ...services.map((s) => stat(`/${s.slug}/`, 0.9)),
-    stat("/pricing/", 0.8),
     stat("/service-areas/", 0.8),
     ...towns.map((t) => stat(t.path, t.tier === "core" ? 0.7 : 0.5)),
     stat("/projects/", 0.7, "weekly"),

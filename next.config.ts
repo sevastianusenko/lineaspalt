@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       // Old WordPress (2022 to 2026) URLs that changed or were merged.
       { source: "/parking-lot-painting-striping-in-lancaster-pa/", destination: "/parking-lot-striping-lancaster-pa/", permanent: true },
       { source: "/contact-us/", destination: "/contact/", permanent: true },
+      { source: "/pricing/", destination: "/services/", permanent: true },
       { source: "/ada-parking-lot-requirements/", destination: "/ada-parking-compliance-pennsylvania/", permanent: true },
       { source: "/sitemap_index.xml", destination: "/sitemap.xml", permanent: true },
       { source: "/page-sitemap.xml", destination: "/sitemap.xml", permanent: true },

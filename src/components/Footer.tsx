@@ -44,7 +44,6 @@ export default function Footer() {
                 <Link href={`/${s.slug}/`} className="hover:text-black hover:underline">{s.name}</Link>
               </li>
             ))}
-            <li><Link href="/pricing/" className="font-bold text-black hover:underline">Pricing guide</Link></li>
           </ul>
         </div>
 

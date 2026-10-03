@@ -28,7 +28,7 @@ export default function TownPage({ t }: { t: Town }) {
     { href: "/pothole-repair-lancaster-pa/", icon: "repair", name: "Pothole repair", d: "Square cut, base checked, hot mix compacted in lifts." },
     { href: "/parking-lot-striping-lancaster-pa/", icon: "striper", name: "Parking lot striping", d: "New layouts and re-striping with ADA stalls, fire lanes, arrows and stencils." },
     { href: "/ada-parking-lot-striping-lancaster-pa/", icon: "ada", name: "ADA markings", d: "Accessible stalls, access aisles and symbols measured to the standard." },
-    { href: "/driveway-sealcoating-lancaster-pa/", icon: "coating", name: "Driveway work", d: "Most driveways are $400 to $700, with a written price before we start." },
+    { href: "/driveway-sealcoating-lancaster-pa/", icon: "coating", name: "Driveway work", d: "Two coats, hand-cut edges and a free written price before we start." },
   ];
 
   return (

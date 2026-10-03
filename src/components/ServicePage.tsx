@@ -26,7 +26,7 @@ export default function ServicePage({ s }: { s: Service }) {
         <p className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px] text-muted">
           <span className="inline-flex items-center gap-2"><Stars size={16} /> 5.0 on Google</span>
           <span>Fully insured</span>
-          <span>Minimum job ${site.minJob}</span>
+          <span>Free written estimates</span>
         </p>
       </PageHero>
 
@@ -102,29 +102,6 @@ export default function ServicePage({ s }: { s: Service }) {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      {/* Price */}
-      <section className="sec py-20 lg:py-28">
-        <div className="wrap grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          <div>
-            <p className="eyebrow reveal">{site.name} pricing</p>
-            <h2 className="reveal mt-4 text-[clamp(28px,3.4vw,40px)]">What {s.name.toLowerCase()} costs</h2>
-            <p className="reveal mt-5 text-[18px] text-muted">{s.price.lead}</p>
-            <p className="reveal mt-4 text-[16px] text-faint">{s.price.note}</p>
-            <Link href="/pricing/" className="btn btn-outline reveal mt-8">Full pricing guide</Link>
-          </div>
-          <div className="reveal card card-flat p-6 sm:p-9">
-            <dl className="grid">
-              {s.price.rows.map(([k, v]) => (
-                <div key={k} className="grid gap-1 border-b border-border py-4 first:pt-0 last:border-0 last:pb-0 sm:grid-cols-[1.2fr_1fr] sm:items-baseline sm:gap-6">
-                  <dt className="text-[16px] text-muted">{k}</dt>
-                  <dd className="font-display text-[20px] font-bold text-black sm:text-right">{v}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
         </div>
       </section>
 

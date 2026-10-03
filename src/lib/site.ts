@@ -36,14 +36,12 @@ export const site = {
     instagram: "https://www.instagram.com/linesasphalt",
   },
   rating: { value: "5.0", count: 40 },
-  minJob: 400,
   founded: 2024,
 };
 
 export const nav = [
   { href: "/services/", label: "Services" },
   { href: "/projects/", label: "Our Work" },
-  { href: "/pricing/", label: "Pricing" },
   { href: "/service-areas/", label: "Areas" },
   { href: "/blog/", label: "Blog" },
   { href: "/about/", label: "About" },

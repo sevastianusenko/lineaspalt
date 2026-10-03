@@ -18,9 +18,9 @@ export default function Terms() {
           <p className="mt-3 text-muted">Last updated: October 1, 2026</p>
           <div className="prose mt-8">
             <p>These terms cover the use of this website, operated by {site.legalName}. By using the site you agree to them.</p>
-            <h2>Estimates and price ranges</h2>
+            <h2>Estimates</h2>
             <p>
-              Prices and price ranges on this website are planning guides only. They are not a quote or an offer. We give a firm written price after we look at your property or photos of it. Our minimum job is ${site.minJob}.
+              Information on this website is not a quote or an offer. We give a firm written price after we look at your property or photos of it.
             </p>
             <h2>Written agreements</h2>
             <p>
