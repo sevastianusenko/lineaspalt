@@ -1,13 +1,13 @@
 ---
-title: "ADA Parking Compliance in Pennsylvania: A Business Owner's Plain-English Guide"
-seoTitle: "ADA Parking Compliance in Pennsylvania: Plain-English Guide"
+title: "ADA Parking Requirements in Pennsylvania: A Business Owner's Plain-English Guide"
+seoTitle: "ADA Parking Requirements in Pennsylvania: Plain-English Guide"
 description: "Plain-English ADA parking compliance guide for Pennsylvania: how many accessible spaces you need, exact space and aisle sizes, signage rules and penalties."
 date: "2026-07-01"
 modified: "2026-07-01"
 category: "line-striping"
 categoryName: "Line Striping"
 image: "church-lot-ada-hatched-stalls"
-words: 1772
+words: 1774
 ---
 
 Most Pennsylvania business owners don’t find out their parking lot is out of ADA compliance from an inspector. They find out from a demand letter. By then, the conversation isn’t about paint, it’s about attorneys, settlements, and deadlines. The frustrating part? The actual fix is usually a day of striping work. This guide covers what the Americans with Disabilities Act requires of your parking lot, in plain English: how many accessible spaces you need, exactly how big they must be, what signs go where, and what happens when a lot falls short. No legalese, no scare tactics, just the numbers, so you can check your own lot this afternoon.
@@ -21,13 +21,13 @@ The ADA applies to places of “public accommodation”, retail stores, restaura
 
 The two authoritative sources, if you want to read the rules yourself, are [ADA.gov](https://www.ada.gov/) and the [U.S. Access Board](https://www.access-board.gov/ada/), which publishes the technical standards every measurement in this article comes from.
 
-## How Many Accessible Spaces Your Lot Needs
+## ADA Parking Space Requirements: How Many Your Lot Needs
 
 The count is based on the total number of parking spaces in your lot. The baseline ratio is one accessible space per 25 total spaces, and the full table looks like this:
 
 Two important add-ons. First: at least one of every six accessible spaces (or fraction thereof) must be **van-accessible**, so even a lot with a single accessible space needs that space to be van-accessible. Second: medical offices have stricter ratios. Outpatient facilities need 10 percent of patient parking accessible; rehabilitation and outpatient physical therapy facilities need 20 percent.
 
-## The Exact Dimensions: Spaces and Access Aisles
+## ADA Parking Dimensions: Spaces and Access Aisles
 
 ![Blue ADA symbol and hatching on a lot lit by street lights](/img/night-lot-blue-ada-hatching.webp)
 *Two accessible spaces sharing one crosshatched access aisle, permitted by the standards, and an efficient layout.*

@@ -23,12 +23,12 @@ export default function TownPage({ t }: { t: Town }) {
     return { name: n, href: m?.path };
   });
   const svc = [
-    { href: "/sealcoating-lancaster-pa/", icon: "sealing", name: "Sealcoating", d: `Protects ${t.name} driveways and lots from water, sun, salt and oil. Two coats and hand-cut edges.` },
-    { href: "/crack-filling-lancaster-pa/", icon: "crack", name: "Crack filling", d: "Hot rubber sealant before winter, so freeze and thaw has nothing to work on." },
-    { href: "/pothole-repair-lancaster-pa/", icon: "repair", name: "Pothole repair", d: "Square cut, base checked, hot mix compacted in lifts." },
-    { href: "/parking-lot-striping-lancaster-pa/", icon: "striper", name: "Parking lot striping", d: "New layouts and re-striping with ADA stalls, fire lanes, arrows and stencils." },
+    { href: "/sealcoating-lancaster-pa/", icon: "sealing", name: "Sealcoating & asphalt sealing", d: `Protects ${t.name} driveways and lots from water, sun, salt and oil. Two coats and hand-cut edges.` },
+    { href: "/crack-filling-lancaster-pa/", icon: "crack", name: "Crack filling & sealing", d: "Hot rubber sealant before winter, so freeze and thaw has nothing to work on." },
+    { href: "/pothole-repair-lancaster-pa/", icon: "repair", name: "Asphalt & pothole repair", d: "Square cut, base checked, hot mix compacted in lifts." },
+    { href: "/parking-lot-striping-lancaster-pa/", icon: "striper", name: "Parking lot striping & line painting", d: "New layouts and re-striping with ADA stalls, fire lanes, arrows and stencils." },
     { href: "/ada-parking-lot-striping-lancaster-pa/", icon: "ada", name: "ADA markings", d: "Accessible stalls, access aisles and symbols measured to the standard." },
-    { href: "/driveway-sealcoating-lancaster-pa/", icon: "coating", name: "Driveway work", d: "Two coats, hand-cut edges and a free written price before we start." },
+    { href: "/driveway-sealcoating-lancaster-pa/", icon: "coating", name: "Driveway sealing", d: "Two coats, hand-cut edges and a free written price before we start." },
   ];
 
   return (
