@@ -24,14 +24,12 @@ Never run `next build` while `next dev` is running on the same folder (corrupts 
 | `src/app/[slug]` | Services, legacy town pages and posts (root-level URLs, same as WordPress). |
 | `src/app/service-areas/[town]` | New town pages. |
 | `src/app/projects`, `src/app/projects/[slug]` | Project index and pages. Nav "Our Work" points here; /gallery/ stays as the photo wall. |
-| `src/app/api/lead` | Quote form endpoint (Resend). |
+| `src/components/LeadForm.tsx` | Quote form. Posts straight to Web3Forms from the browser (access key in the file; public by design). Leads arrive at the email the key was created with. |
 | `next.config.ts` | 301 redirects from old WordPress URLs. |
 
-## Environment variables (Vercel)
+## Environment variables
 
-- `RESEND_API_KEY` : without it the form only logs the lead on the server and shows success.
-- `LEAD_TO` : where leads go (default `contact@linesasphalt.com`).
-- `LEAD_FROM` : verified sender (default Resend sandbox sender).
+None. The form uses Web3Forms, no server code.
 
 ## Scripts
 

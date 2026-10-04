@@ -18,13 +18,7 @@ console.log('menu closed after nav:', (await mp.locator('#mobile-nav').count()) 
 const d = await browser.newContext({ viewport: { width: 1440, height: 900 } });
 const p = await d.newPage();
 await p.goto(base + '/contact/', { waitUntil: 'networkidle' });
-await p.fill('#lf-name', 'Test Customer');
-await p.fill('#lf-phone', '717-555-0123');
-await p.fill('#lf-town', 'Lititz, PA');
-await p.selectOption('#lf-service', 'Driveway sealcoating');
-await p.click('button[type=submit]');
-await p.waitForSelector('text=Request received');
-console.log('form: success state shown');
+// Form is covered by scripts/form-test.mjs, which intercepts Web3Forms instead of sending a real email.
 
 // 4. gallery lightbox
 await p.goto(base + '/gallery/', { waitUntil: 'networkidle' });

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { site } from "@/lib/site";
 
+const WEB3FORMS_KEY = "8c078b64-6b21-4d91-b468-bd993cb5f213";
+
 const serviceOptions = [
   "Line striping",
   "Parking lot striping",
@@ -23,13 +25,26 @@ export default function LeadForm({ defaultService = "", compact = false }: { def
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const phone = String(fd.get("phone") || "");
+    if (phone.replace(/\D/g, "").length < 10) {
+      setErr("Please enter a phone number with area code.");
+      setState("error");
+      return;
+    }
     setState("sending");
     setErr("");
-    const fd = new FormData(e.currentTarget);
+    // Web3Forms delivers the submission by email. The access key is public by design.
+    fd.append("access_key", WEB3FORMS_KEY);
+    fd.append("subject", `New quote request: ${fd.get("service") || "asphalt"} in ${fd.get("town") || "PA"}`);
+    fd.append("from_name", `${site.name} website`);
+    fd.append("page", window.location.pathname);
     try {
-      const res = await fetch("/api/lead/", { method: "POST", body: JSON.stringify(Object.fromEntries(fd)), headers: { "Content-Type": "application/json" } });
+      const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: fd, headers: { Accept: "application/json" } });
       const j = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(j.error || "Something went wrong.");
+      if (!res.ok || !j.success) throw new Error(j.message || "Something went wrong.");
+      form.reset();
       setState("done");
     } catch (ex) {
       setErr(ex instanceof Error ? ex.message : "Something went wrong.");
@@ -87,9 +102,9 @@ export default function LeadForm({ defaultService = "", compact = false }: { def
           <textarea id="lf-msg" name="message" rows={4} className="field" placeholder="Size, what you see, when you would like it done. Photos help: reply to our call or text with pictures." />
         </div>
       )}
-      {/* honeypot */}
+      {/* honeypot: Web3Forms drops submissions where botcheck is filled */}
       <div className="absolute left-[-9999px] h-0 w-0 overflow-hidden" aria-hidden>
-        <label>Leave this empty<input name="company" tabIndex={-1} autoComplete="off" /></label>
+        <label>Leave this empty<input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" /></label>
       </div>
       <div className="flex flex-wrap items-center gap-4">
         <button type="submit" className="btn btn-yellow" disabled={state === "sending"}>

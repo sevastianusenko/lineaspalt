@@ -27,7 +27,7 @@ Rejected on 2026-10-02: a dark "asphalt" theme with Big Shoulders stencil type. 
 ## Deploy checklist
 
 1. Push to GitHub, create Vercel project.
-2. Env: RESEND_API_KEY, LEAD_TO, LEAD_FROM (verified domain).
+2. Form: Web3Forms key is in LeadForm.tsx. After going live, send a test lead and check which inbox it reaches; in the Web3Forms dashboard you can restrict submissions to the linesasphalt.com domain.
 3. Move linesasphalt.com from Hostinger WordPress to Vercel; 301 map is in next.config.ts, check old URLs after DNS switch.
 4. Search Console: submit /sitemap.xml, request indexing for home and service pages.
 5. Google Business Profile: NAP must match the site.
