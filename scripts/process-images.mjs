@@ -2,7 +2,36 @@ import sharp from 'sharp'; import fs from 'fs'; import path from 'path';
 const LOCAL='../source-media', OLD='scripts/oldimgs';
 // [file, dir, slug, category, alt]
 const L=(f,s,c,a)=>[f,LOCAL,s,c,a], O=(f,s,c,a)=>[f,OLD,s,c,a];
+// Batch sent by the client over WhatsApp on 2026-10-06 (no EXIF, so no dates or towns).
+const W=(f,s,c,a)=>[f,LOCAL+'/2026-10-06',s,c,a];
 const items=[
+ W('wa01.jpeg','long-rural-driveway-sealed-lawn','sealcoating','Long rural driveway freshly sealed, curving across a wide lawn'),
+ W('wa02.jpeg','long-driveway-sealcoat-tree-line','sealcoating','Long sealcoated driveway running toward a house past a tree line'),
+ W('wa03.jpeg','driveway-sealcoat-concrete-walk-edge','sealcoating','Sealcoated driveway with a clean edge along a concrete walkway'),
+ W('wa04.jpeg','small-lot-restripe-white-stalls-sunset','striping','Small parking lot re-striped with white stall lines at sunset'),
+ W('wa05.jpeg','small-lot-white-arrows-sealed','striping','Sealed lot with new white directional arrows and stall lines'),
+ W('wa06.jpeg','donation-center-lot-white-hatching','striping','White hatched zone and arrow painted in front of a donation center'),
+ W('wa07.jpeg','donation-center-lot-ada-hatching','ada','Donation center lot with blue ADA stalls and white hatched no parking area'),
+ W('wa08.jpeg','night-ada-stall-curb-striping','ada','Blue ADA stall with white access aisle hatching painted at night beside a curb'),
+ W('wa09.jpeg','loading-area-sealcoat-green-bollards','sealcoating','Freshly sealed asphalt under a loading canopy with green bollards'),
+ W('wa10.jpeg','commercial-lot-white-stalls-hatching-aerial','striping','Commercial lot re-striped with white stalls and hatching, seen from above'),
+ W('wa11.jpeg','wooded-driveway-sealcoat-curve','sealcoating','Sealcoated driveway curving through a wooded yard'),
+ W('wa12.jpeg','wooded-driveway-sealcoat-long','sealcoating','Long sealcoated driveway through trees and shrubs'),
+ W('wa13.jpeg','brick-building-lot-yellow-stalls','striping','Parking lot behind a brick building with fresh yellow stall lines'),
+ W('wa14.jpeg','school-lot-yellow-hatching-ada','ada','Yellow hatched aisle and stalls with a blue ADA stall by a brick building'),
+ W('wa15.jpeg','brick-building-blue-ada-stall','ada','Blue ADA stall with the symbol of access and blue lines beside a brick building'),
+ W('wa16.jpeg','driveway-sealcoat-caution-tape-farmhouse','sealcoating','Sealcoated driveway taped off for curing in front of a country home'),
+ W('wa17.jpeg','long-hill-driveway-sealcoat','sealcoating','Long hillside driveway sealcoated with a crisp grass edge'),
+ W('wa18.jpeg','driveway-apron-sealcoat-road-tape','sealcoating','Sealcoated driveway apron at the road, taped off while it cures'),
+ W('wa19.jpeg','rural-driveway-sealcoat-tape-road','sealcoating','Rural driveway freshly sealed and taped off where it meets the road'),
+ W('wa20.jpeg','wide-driveway-sealcoat-planter','sealcoating','Wide driveway sealcoated past a planter and lawn'),
+ W('wa21.jpeg','driveway-sealcoat-barn-view','sealcoating','Sealcoated driveway beside a house with a barn in the background'),
+ W('wa22.jpeg','yellow-house-wide-driveway-sealcoat','sealcoating','Wide sealcoated driveway in front of a yellow house with a three-car garage'),
+ W('wa23.jpeg','long-driveway-sealcoat-to-house','sealcoating','Long straight driveway sealcoated up to the house'),
+ W('wa24.jpeg','ranch-house-driveway-sealcoat-tape','sealcoating','Ranch house driveway freshly sealcoated and taped off at the street'),
+ W('wa25.jpeg','driveway-sealcoat-evening-glow','sealcoating','Freshly sealcoated driveway in evening light'),
+ W('wa26.jpeg','driveway-sealcoat-tape-two-story','sealcoating','Sealcoated driveway taped off in front of a two-story home'),
+ W('wa27.jpeg','curved-driveway-sealcoat-dusk','sealcoating','Curved driveway sealcoated at dusk in a residential neighborhood'),
  L('IMG_1652.JPEG','retail-lot-yellow-stalls-ada-curb','striping','Yellow-striped parking stalls and a blue ADA curb outside a retail plaza'),
  L('IMG_1653.JPEG','retail-lot-fresh-yellow-stripes','striping','Freshly painted yellow stall lines across a large retail parking lot'),
  L('IMG_1655.JPEG','retail-lot-angled-yellow-stripes','striping','Angled yellow parking stripes laid out on a crack-filled asphalt lot'),

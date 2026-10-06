@@ -1,4 +1,247 @@
 {
+ "long-rural-driveway-sealed-lawn": {
+  "slug": "long-rural-driveway-sealed-lawn",
+  "cat": "sealcoating",
+  "alt": "Long rural driveway freshly sealed, curving across a wide lawn",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "long-driveway-sealcoat-tree-line": {
+  "slug": "long-driveway-sealcoat-tree-line",
+  "cat": "sealcoating",
+  "alt": "Long sealcoated driveway running toward a house past a tree line",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-concrete-walk-edge": {
+  "slug": "driveway-sealcoat-concrete-walk-edge",
+  "cat": "sealcoating",
+  "alt": "Sealcoated driveway with a clean edge along a concrete walkway",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "small-lot-restripe-white-stalls-sunset": {
+  "slug": "small-lot-restripe-white-stalls-sunset",
+  "cat": "striping",
+  "alt": "Small parking lot re-striped with white stall lines at sunset",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "small-lot-white-arrows-sealed": {
+  "slug": "small-lot-white-arrows-sealed",
+  "cat": "striping",
+  "alt": "Sealed lot with new white directional arrows and stall lines",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "donation-center-lot-white-hatching": {
+  "slug": "donation-center-lot-white-hatching",
+  "cat": "striping",
+  "alt": "White hatched zone and arrow painted in front of a donation center",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "donation-center-lot-ada-hatching": {
+  "slug": "donation-center-lot-ada-hatching",
+  "cat": "ada",
+  "alt": "Donation center lot with blue ADA stalls and white hatched no parking area",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "night-ada-stall-curb-striping": {
+  "slug": "night-ada-stall-curb-striping",
+  "cat": "ada",
+  "alt": "Blue ADA stall with white access aisle hatching painted at night beside a curb",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "loading-area-sealcoat-green-bollards": {
+  "slug": "loading-area-sealcoat-green-bollards",
+  "cat": "sealcoating",
+  "alt": "Freshly sealed asphalt under a loading canopy with green bollards",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "commercial-lot-white-stalls-hatching-aerial": {
+  "slug": "commercial-lot-white-stalls-hatching-aerial",
+  "cat": "striping",
+  "alt": "Commercial lot re-striped with white stalls and hatching, seen from above",
+  "w": 1024,
+  "h": 768,
+  "sw": 640,
+  "sh": 480
+ },
+ "wooded-driveway-sealcoat-curve": {
+  "slug": "wooded-driveway-sealcoat-curve",
+  "cat": "sealcoating",
+  "alt": "Sealcoated driveway curving through a wooded yard",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "wooded-driveway-sealcoat-long": {
+  "slug": "wooded-driveway-sealcoat-long",
+  "cat": "sealcoating",
+  "alt": "Long sealcoated driveway through trees and shrubs",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "brick-building-lot-yellow-stalls": {
+  "slug": "brick-building-lot-yellow-stalls",
+  "cat": "striping",
+  "alt": "Parking lot behind a brick building with fresh yellow stall lines",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "school-lot-yellow-hatching-ada": {
+  "slug": "school-lot-yellow-hatching-ada",
+  "cat": "ada",
+  "alt": "Yellow hatched aisle and stalls with a blue ADA stall by a brick building",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "brick-building-blue-ada-stall": {
+  "slug": "brick-building-blue-ada-stall",
+  "cat": "ada",
+  "alt": "Blue ADA stall with the symbol of access and blue lines beside a brick building",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-caution-tape-farmhouse": {
+  "slug": "driveway-sealcoat-caution-tape-farmhouse",
+  "cat": "sealcoating",
+  "alt": "Sealcoated driveway taped off for curing in front of a country home",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "long-hill-driveway-sealcoat": {
+  "slug": "long-hill-driveway-sealcoat",
+  "cat": "sealcoating",
+  "alt": "Long hillside driveway sealcoated with a crisp grass edge",
+  "w": 768,
+  "h": 1024,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-apron-sealcoat-road-tape": {
+  "slug": "driveway-apron-sealcoat-road-tape",
+  "cat": "sealcoating",
+  "alt": "Sealcoated driveway apron at the road, taped off while it cures",
+  "w": 768,
+  "h": 1024,
+  "sw": 480,
+  "sh": 640
+ },
+ "rural-driveway-sealcoat-tape-road": {
+  "slug": "rural-driveway-sealcoat-tape-road",
+  "cat": "sealcoating",
+  "alt": "Rural driveway freshly sealed and taped off where it meets the road",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "wide-driveway-sealcoat-planter": {
+  "slug": "wide-driveway-sealcoat-planter",
+  "cat": "sealcoating",
+  "alt": "Wide driveway sealcoated past a planter and lawn",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-barn-view": {
+  "slug": "driveway-sealcoat-barn-view",
+  "cat": "sealcoating",
+  "alt": "Sealcoated driveway beside a house with a barn in the background",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "yellow-house-wide-driveway-sealcoat": {
+  "slug": "yellow-house-wide-driveway-sealcoat",
+  "cat": "sealcoating",
+  "alt": "Wide sealcoated driveway in front of a yellow house with a three-car garage",
+  "w": 768,
+  "h": 1024,
+  "sw": 480,
+  "sh": 640
+ },
+ "long-driveway-sealcoat-to-house": {
+  "slug": "long-driveway-sealcoat-to-house",
+  "cat": "sealcoating",
+  "alt": "Long straight driveway sealcoated up to the house",
+  "w": 768,
+  "h": 1024,
+  "sw": 480,
+  "sh": 640
+ },
+ "ranch-house-driveway-sealcoat-tape": {
+  "slug": "ranch-house-driveway-sealcoat-tape",
+  "cat": "sealcoating",
+  "alt": "Ranch house driveway freshly sealcoated and taped off at the street",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-evening-glow": {
+  "slug": "driveway-sealcoat-evening-glow",
+  "cat": "sealcoating",
+  "alt": "Freshly sealcoated driveway in evening light",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "driveway-sealcoat-tape-two-story": {
+  "slug": "driveway-sealcoat-tape-two-story",
+  "cat": "sealcoating",
+  "alt": "Sealcoated driveway taped off in front of a two-story home",
+  "w": 1200,
+  "h": 1600,
+  "sw": 480,
+  "sh": 640
+ },
+ "curved-driveway-sealcoat-dusk": {
+  "slug": "curved-driveway-sealcoat-dusk",
+  "cat": "sealcoating",
+  "alt": "Curved driveway sealcoated at dusk in a residential neighborhood",
+  "w": 768,
+  "h": 1024,
+  "sw": 480,
+  "sh": 640
+ },
  "retail-lot-yellow-stalls-ada-curb": {
   "slug": "retail-lot-yellow-stalls-ada-curb",
   "cat": "striping",

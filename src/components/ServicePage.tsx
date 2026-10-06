@@ -110,7 +110,7 @@ export default function ServicePage({ s }: { s: Service }) {
         <section className="sec-grey py-20 lg:py-28">
           <div className="wrap">
             <div className="flex flex-wrap items-end justify-between gap-6">
-              <SectionHead eyebrow={`${site.name} work`} title="On real Lancaster County properties" />
+              <SectionHead eyebrow={`${site.name} work`} title="On real customer properties" />
               <Link href="/gallery/" className="btn btn-outline reveal">Full gallery</Link>
             </div>
             <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">

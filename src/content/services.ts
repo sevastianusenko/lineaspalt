@@ -36,7 +36,7 @@ export const services: Service[] = [
     lead: "Straight lines, correct dimensions, and paint that stays visible. We stripe new layouts and re-stripe worn ones for businesses, churches, schools, apartment communities and industrial sites.",
     hero: "retail-lot-fresh-yellow-stripes",
     icon: "striper",
-    gallery: ["shopping-center-yellow-hatching", "retail-lot-angled-yellow-stripes", "white-directional-arrows-lane-line", "lot-arrows-white-center-line", "reserved-stencil-night", "order-here-stencil-drive"],
+    gallery: ["small-lot-restripe-white-stalls-sunset", "donation-center-lot-white-hatching", "shopping-center-yellow-hatching", "retail-lot-angled-yellow-stripes", "white-directional-arrows-lane-line", "lot-arrows-white-center-line", "reserved-stencil-night", "order-here-stencil-drive"],
     intro: [
       "Pavement markings do a quiet job. They tell drivers where to go, tell pedestrians where it is safe to cross, keep fire lanes open, and make a lot hold the number of cars it was designed to hold. When the paint fades, people start parking wherever they like, ADA stalls lose their legal markings, and the property starts to look neglected even when everything else is in good shape.",
       "Line striping is the finishing step of almost every asphalt project, so we handle it as a trade of its own and not as an afterthought. We lay out from measurements, snap chalk lines, and paint with a machine that holds a consistent width. Stencils are placed by hand so letters and symbols sit square in the stall.",
@@ -91,7 +91,7 @@ export const services: Service[] = [
     lead: "Fresh stall lines, clear aisles and ADA markings that pass inspection. We stripe parking lots for property managers, business owners, congregations and HOAs across Lancaster County.",
     hero: "shopping-center-yellow-hatching",
     icon: "lot",
-    gallery: ["retail-lot-yellow-stalls-ada-curb", "retail-lot-restriped-blue-ada", "church-lot-ada-hatched-stalls", "empty-lot-night-white-stalls", "small-business-lot-numbered-stalls", "rear-lot-restriped-numbered"],
+    gallery: ["donation-center-lot-white-hatching", "small-lot-white-arrows-sealed", "brick-building-lot-yellow-stalls", "commercial-lot-white-stalls-hatching-aerial", "retail-lot-yellow-stalls-ada-curb", "retail-lot-restriped-blue-ada", "church-lot-ada-hatched-stalls", "empty-lot-night-white-stalls", "small-business-lot-numbered-stalls", "rear-lot-restriped-numbered"],
     intro: [
       "A parking lot is the first thing a customer touches. If the stalls are faded and the aisles are unclear, it sets the tone before they ever reach your door. If the lines are sharp, the lot looks cared for and the property looks managed.",
       "Most of our parking lot work is a re-stripe: the layout is fine and the paint needs to be renewed. Sometimes the layout itself has to change, because a business added a loading zone, an ADA stall was missing, or the old stall angles waste space. In those cases we measure the lot and plan the new layout before we paint, so the count of stalls and the aisle widths work.",
@@ -147,7 +147,7 @@ export const services: Service[] = [
     lead: "Correct counts, correct widths, and markings that do not wear away in two winters. We stripe accessible stalls, van spaces and access aisles for commercial properties in Lancaster County.",
     hero: "ada-stall-white-outline-brick-building",
     icon: "ada",
-    gallery: ["ada-blue-symbol-night-striping", "night-lot-blue-ada-hatching", "church-lot-ada-spaces-wide", "ada-stall-white-hatching-wood-deck", "shopping-lot-ada-hatching-night", "loading-zone-stencil-striping"],
+    gallery: ["brick-building-blue-ada-stall", "school-lot-yellow-hatching-ada", "donation-center-lot-ada-hatching", "night-ada-stall-curb-striping", "ada-blue-symbol-night-striping", "night-lot-blue-ada-hatching", "church-lot-ada-spaces-wide", "ada-stall-white-hatching-wood-deck", "shopping-lot-ada-hatching-night", "loading-zone-stencil-striping"],
     intro: [
       "Accessible parking is one of the most common places a business gets caught out. The stall might be the right size but missing an access aisle, or the aisle might be too narrow for a van lift, or there may not be enough stalls for the size of the lot. These are measurement problems, and they are easy to fix once someone measures.",
       "Under the 2010 ADA Standards, the number of accessible stalls depends on the total number of stalls in the lot. A lot with 1 to 25 stalls needs one accessible stall. 26 to 50 needs two. 51 to 75 needs three, and the count keeps rising from there. At least one in every six accessible stalls has to be van accessible, which means a wider stall or a wider access aisle. We count your lot, compare it against the table, and tell you what is required.",
@@ -312,7 +312,7 @@ export const services: Service[] = [
     lead: "Sealcoating is sunscreen for asphalt. It slows oxidation, keeps water out, and brings back the black surface. We do it in two coats, with proper prep, and we tell you when it is not the right move.",
     hero: "driveway-sealcoat-orange-cones",
     icon: "sealing",
-    gallery: ["driveway-sealcoat-wide-apron", "driveway-sealcoat-caution-tape", "driveway-sealcoat-glossy-wet", "driveway-sealcoat-curved-apron", "driveway-sealcoat-stamped-walkway", "driveway-sealcoat-garden-edge"],
+    gallery: ["long-driveway-sealcoat-tree-line", "loading-area-sealcoat-green-bollards", "curved-driveway-sealcoat-dusk", "wide-driveway-sealcoat-planter", "driveway-sealcoat-wide-apron", "driveway-sealcoat-caution-tape", "driveway-sealcoat-glossy-wet", "driveway-sealcoat-curved-apron", "driveway-sealcoat-stamped-walkway", "driveway-sealcoat-garden-edge"],
     intro: [
       "Sealcoating, also called asphalt sealing or seal coating, protects driveways and parking lots alike. Asphalt is made of stone held together by a petroleum binder. Over time the sun dries out that binder, rain and snow work their way into the surface, and salt and oil attack what is left. Sealcoating puts a thin protective layer on top, so the pavement does not have to take all of that directly.",
       "A good sealcoat job is mostly preparation. We blow the surface clean, scrape out the vegetation along the edges, treat oil spots with primer, and fill the cracks with hot rubber before anything is sprayed. Then we cut the edges in by hand with a brush so sealer stays where it belongs, and apply two coats instead of one thick one.",
@@ -368,7 +368,7 @@ export const services: Service[] = [
     lead: "A sealed driveway looks sharp and lasts years longer. We clean it, fill the cracks, cut the edges by hand and apply two coats. Most driveways are done in a single day.",
     hero: "driveway-sealcoat-fall-tree",
     icon: "coating",
-    gallery: ["driveway-sealcoat-autumn-garage", "driveway-sealcoat-small-home", "driveway-sealcoat-long-ranch", "driveway-sealcoat-sloped-cape", "driveway-sealcoat-grass-edge", "driveway-sealcoat-curved-apron", "driveway-sealcoat-orange-cones", "driveway-sealcoat-long-drive"],
+    gallery: ["driveway-sealcoat-evening-glow", "yellow-house-wide-driveway-sealcoat", "long-driveway-sealcoat-to-house", "driveway-sealcoat-tape-two-story", "driveway-sealcoat-autumn-garage", "driveway-sealcoat-small-home", "driveway-sealcoat-long-ranch", "driveway-sealcoat-sloped-cape", "driveway-sealcoat-grass-edge", "driveway-sealcoat-curved-apron"],
     intro: [
       "Driveway sealing, sealcoating, seal coating, blacktop sealing: people use all four names for the same job, a protective coat over an asphalt driveway. Your driveway takes more abuse than most things around your house. It sits in full sun, holds snow and salt all winter, and carries cars that drip oil and fluids. By year three or four, a driveway that started out black is usually gray, dry and a little rough.",
       "Sealcoating is the cheapest way to extend the life of a driveway. It is not a miracle and it does not repair damage, but it slows the process that creates damage. Homeowners who seal on a regular schedule often get many more years before they have to think about repaving, and a sealed driveway looks sharp from the street.",
